@@ -1,0 +1,139 @@
+#profile
+{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+#container-profile-photo
+{
+    display: flex;
+    margin-right: 10px;
+}
+#profile-photo
+{
+    border-radius: 50%;
+}
+
+#social-icons-container
+{
+    display: flex;
+    gap: 10px;
+}
+
+#social-icon {
+    transition: color 0.3s ease; /* Agrega una transición para un efecto visual */
+}
+
+#social-icon:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse */
+}
+
+.text-justify
+{
+    text-align: justify;
+}
+
+#icon-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los íconos pasen a la siguiente línea si es necesario */
+    gap: 10px; /* Espaciado entre íconos */
+    justify-content: center;
+    gap: 20;
+}
+
+#icon {
+    border-radius: 10px;
+    border: 1px solid #0000ff;
+    width: 60px; /* Ancho fijo para mantener consistencia */
+    height: 60px; /* Altura fija para mantener proporciones */
+    object-fit: contain; /* Ajusta el contenido dentro del espacio */
+    box-sizing: border-box; /* Asegúrate de que el padding no altere el tamaño */
+    padding: 5px;
+}
+
+#container-grid
+{
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+#container-grid p
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#languages-container
+{
+    display: flex;
+    gap: 10px;
+}
+
+#container-grid-proyectos
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#container-grid-proyectos p
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.carousel-item
+{
+    height: 250px;
+    overflow: hidden;
+    border: 2px solid #000;
+    border-style: groove;
+    border-radius: 15px;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(32,2,61,0.9332107843137255) 25%, rgba(0,212,255,1) 100%);
+}
+
+.carousel-item img
+{
+    border: 2px solid #000;
+    border-style: groove;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#footer-elements {
+    display: flex; /* Flexbox para alinear */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Espacio entre elementos */
+    padding: 20px;
+    text-align: center; /* Asegura el centrado del texto */
+}
+
+.footer-link {
+    display: flex; /* Permite alinear ícono y texto */
+    align-items: center; /* Centra verticalmente ícono y texto */
+    gap: 8px; /* Espacio entre ícono y texto */
+    color: #fff; /* Cambia el color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 1rem; /* Tamaño del texto */
+}
+
+.footer-link i {
+    color: #007bff; /* Color del ícono */
+}
+
+.footer-link:hover i {
+    color: #0056b3; /* Cambio de color al pasar el mouse */
+}
+
+i {
+    color: #fff; /* Color predeterminado de los íconos */
+    transition: color 0.3s ease; /* Transición suave */
+    padding-bottom: 5px;
+}
+
+i:hover {
+    color: #007bff; /* Cambia el color del ícono al hacer hover */
+}
