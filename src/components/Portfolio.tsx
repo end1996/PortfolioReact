@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { portfolioProjects, type Project} from "../data/portfolioData";
 import { Button, Row, Col, Modal, Card } from "react-bootstrap";
-import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
 
 const categories = ["Todos", "Wordpress", "PHP", "Java", "Flutter", "React"];
 
