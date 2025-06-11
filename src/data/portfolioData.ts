@@ -1,4 +1,4 @@
-import {projectImages} from "../assets/images/projects/index";
+import {projectImages} from "../assets/images/projects";
 
 export interface Project {
   id: number;
