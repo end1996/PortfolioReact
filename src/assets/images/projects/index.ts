@@ -1,8 +1,8 @@
 import webForm from './webForm.gif';
-import agencia from './agencia_2.png';
-import tareas from './tareas_1.png';
+import agencia from './agenciaViajes.gif';
+import tareas from './gestionTareas.gif';
 import toktik from './toktik.gif';
-import peliculas from './peliculas_1.png';
+import arteIdeasBackend from './arteIdeasBackend.gif';
 import portfolio from './portfolio.gif';
 
 export const projectImages = {
@@ -10,8 +10,8 @@ export const projectImages = {
     agencia,
     tareas,
     toktik,
-    peliculas,
-    portfolio
+    arteIdeasBackend,
+    portfolio,
 };
 
 console.log("Project images loaded:", projectImages);

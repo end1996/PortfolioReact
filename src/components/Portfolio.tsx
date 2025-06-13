@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { portfolioProjects, type Project} from "../data/portfolioData";
 import { Button, Row, Col, Modal, Card } from "react-bootstrap";
+import RepoLanguages from "./RepoLanguages";
 
 const categories = ["Todos", "Wordpress", "PHP", "Java", "Flutter", "React"];
 
@@ -40,6 +41,7 @@ export default function Portfolio() {
                 <Card.Body>
                   <Card.Title>{project.title}</Card.Title>
                   <Card.Text>{project.category}</Card.Text>
+                  <Card.Footer><RepoLanguages repo={project.repo}/></Card.Footer>
                 </Card.Body>
               </Card>
             </Col>

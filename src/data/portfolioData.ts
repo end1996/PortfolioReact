@@ -6,6 +6,7 @@ export interface Project {
   category: string;
   description: string;
   image: string;
+  repo?: string;
 }
 
 export const portfolioProjects: Project[] = [
@@ -15,6 +16,7 @@ export const portfolioProjects: Project[] = [
     category: "Wordpress",
     description: "Sitio web desarrollado en wordpress con un plugin de formulario personalizado.",
     image: projectImages.webForm,
+    repo: "end1996/webFormPlugin"
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ export const portfolioProjects: Project[] = [
     category: "Java",
     description: "Aplicación de agencia de viajes desarrollada en Java con interfaz gráfica.",
     image: projectImages.agencia,
+    repo: "end1996/agencia_viajes"
   },
   {
     id: 3,
@@ -29,6 +32,7 @@ export const portfolioProjects: Project[] = [
     category: "PHP",
     description: "Aplicación de gestión de tareas desarrollada en PHP con base de datos MySQL.",
     image: projectImages.tareas,
+    repo: "end1996/GestionTareas"
   },
   {
     id: 4,
@@ -36,13 +40,15 @@ export const portfolioProjects: Project[] = [
     category: "Flutter",
     description: "Aplicación movil con funcionalidad similar a Tik-Tok",
     image: projectImages.toktik,
+    repo: "end1996/Tok_Tik_App"
   },
   {
     id: 5,
-    title: "Peliculas App",
-    category: "Flutter",
-    description: "Aplicación movil para buscar y ver información de películas actuales, desarrollada en Flutter con una interfaz amigable.",
-    image: projectImages.peliculas,
+    title: "ArteIdeas Backend",
+    category: "Wordpress",
+    description: "Plugin personalizado para WordPress y WooCommerce que gestiona productos con marcos, dimensiones personalizadas y precios según variaciones. Incluye creación automática de tablas, almacenamiento de datos y endpoints REST.",
+    image: projectImages.arteIdeasBackend,
+    repo: "end1996/ArteIdeasBackend"
   },
   {
     id: 6,
@@ -50,5 +56,6 @@ export const portfolioProjects: Project[] = [
     category: "React",
     description: "Portafolio personal desarrollado en React con animaciones y secciones interactivas. Usa React Bootstrap para el diseño y TypeScript para la tipificación.",
     image: projectImages.portfolio,
+    repo: "end1996/PortfolioReact"
   }
 ];
