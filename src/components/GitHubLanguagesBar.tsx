@@ -15,11 +15,17 @@ const languagesColors: { [key: string]: string } = {
     Java: "#b07219",
     PHP: "#4F5D95",
     Kotlin: "#a97bff",
-    ObjectiveC: "#438eff",
+    "Objective-C": "#438eff",
     Swift: "#f05138",
     Dart: "#00B4AB",
     Flutter: "#02569B",
-    CSS: "#663399"
+    CSS: "#663399",
+    CMake: "#da3434",
+    HTML: "#e34c26",
+    C: "#555555",
+    Other: "#ededed",
+    "C++": "#f34b7d",
+
 };
 
 function GitHubLanguagesBar({ repo}: GitHubLanguagesBarProps) {
