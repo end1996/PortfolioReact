@@ -33,7 +33,7 @@ function App() {
 
       <AnimatedSection
         id="about"
-        className="p-5"
+        className="p-2"
         preset="slide-left"
       >
         <AboutMe />
