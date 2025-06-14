@@ -44,14 +44,6 @@ export const portfolioProjects: Project[] = [
   },
   {
     id: 5,
-    title: "ArteIdeas Backend",
-    category: "Wordpress",
-    description: "Plugin personalizado para WordPress y WooCommerce que gestiona productos con marcos, dimensiones personalizadas y precios según variaciones. Incluye creación automática de tablas, almacenamiento de datos y endpoints REST.",
-    image: projectImages.arteIdeasBackend,
-    repo: "end1996/ArteIdeasBackend"
-  },
-  {
-    id: 6,
     title: "Porftolio Personal",
     category: "React",
     description: "Portafolio personal desarrollado en React con animaciones y secciones interactivas. Usa React Bootstrap para el diseño y TypeScript para la tipificación. Incluye secciones de presentación, habilidades, proyectos y contacto. Responsive y optimizado",
