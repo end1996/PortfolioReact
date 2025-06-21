@@ -4,10 +4,38 @@
   font-family: 'Poppins', sans-serif;
 }
 
-#home {
+/* #home {
   background-image: url('./assets/images/fondo.jpg');
   background-size: cover;
+} */
+
+#navbar-toggler span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 5px 0;
+  background-color: white;
+  transition: all 0.3s ease;
 }
+
+#navbar-toggler:focus {
+  outline: none;
+}
+
+.nav-link {
+  color: #fff !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+.nav-link.active {
+  color: #0d6efd !important;
+  font-weight: 500;
+}
+
 
 .skills-highlight {
   font-size: 1.5rem;
@@ -21,6 +49,10 @@
 
 .text-132 {
   font-size: 8.25rem; /* o 132px */
+}
+
+.text-48 {
+  font-size: 3rem; /* o 48px */
 }
 
 .text-36 {
@@ -86,11 +118,26 @@
   border-color: rgba(255, 255, 255, 0.1);
 }
 
+.btn:not(.btn-link) {
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+.btn-download {
+    border-width: 2px;
+    font-weight: 500;
+    padding: .8rem 2.6rem;
+    transition: all .5s ease;
+}
+
+.rounded-pill {
+    border-radius: 50rem!important;
+    border-radius: var(--bs-border-radius-pill)!important;
+}
+
 /*🌟 Tarjetas destacadas*/
 .featured-box {
-  padding: 20px;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.05);
+  box-sizing: border-box;
+  position: relative;
 }
 
 .brands-grid {

@@ -1,7 +1,7 @@
 function AboutMe() {
   return (
     <>
-      <div className="container px-lg-5">
+      <div className="container">
         <div className="position-relative d-flex text-center m-5">
           <h2 className="text-132 fw-bold w-100 mb-0 opacity-1">Sobre mí</h2>
           <p className="text-36 fw-bold position-absolute w-100 align-self-center lh-base mb-0">
@@ -10,8 +10,8 @@ function AboutMe() {
           </p>
         </div>
         <div className="row gy-5">
-          <div className="col-lg-7 col-xl-8 text-center text-lg-start py-3">
-            <h2 className="text-28 fw-bold mb-3 text">
+          <div className="col-lg-7 col-xl-8 text-center text-lg-start">
+            <h2 className="text-28 fw-bold mb-3">
               Soy <span className="text-primary">Enmanuel Nava,</span> un
               desarrollador fullstack
             </h2>
@@ -53,7 +53,7 @@ function AboutMe() {
               <a
                 href="/CV_Enmanuel_Nava_Developer_2025.pdf"
                 download=""
-                className="btn btn-primary rounded-pill text-16 p-3"
+                className="btn btn-download btn-primary rounded-pill"
               >
                 Download CV
               </a>
@@ -62,20 +62,20 @@ function AboutMe() {
           <div className="container my-5">
             <div className="row text-center py-4">
               <div className="col-6 col-md-3 border-end border-secondary">
-                <h1>💻</h1>
-                <p className="fw-bold text-16">Desarrollo Web</p>
+                <h1 className="text-48">💻</h1>
+                <p className="text-16">Desarrollo Web</p>
               </div>
               <div className="col-6 col-md-3 border-end border-secondary">
-                <h1>📱</h1>
-                <p className="fw-bold text-16">Desarrollo Móvil</p>
+                <h1 className="text-48">📱</h1>
+                <p className="text-16">Desarrollo Móvil</p>
               </div>
               <div className="col-6 col-md-3 border-end border-secondary mt-4 mt-md-0">
-                <h1>📊</h1>
-                <p className="fw-bold text-16">Gestión de Proyectos</p>
+                <h1 className="text-48">📊</h1>
+                <p className="text-16">Gestión de Proyectos</p>
               </div>
               <div className="col-6 col-md-3 mt-4 mt-md-0">
-                <h1>📝</h1>
-                <p className="fw-bold text-16">Liderazgo de Equipos</p>
+                <h1 className="text-48">📝</h1>
+                <p className="text-16">Liderazgo de Equipos</p>
               </div>
             </div>
           </div>
