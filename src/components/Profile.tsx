@@ -1,5 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
-import profile from "../assets/images/profile.png";
+import profile from "../assets/images/profile.jpg";
 
 type ProfileProps = {
   theme: string;

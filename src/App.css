@@ -4,6 +4,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
+#home {
+  background-image: url('./assets/images/fondo.jpg');
+  background-size: cover;
+}
+
 .skills-highlight {
   font-size: 1.5rem;
 }
@@ -55,13 +60,15 @@
 
 /*🧾 Estilo de lista*/
 .list-style-2 {
-  list-style-type: none;
-  padding-left: 0;
+  padding: 0;
 }
 
-.list-style li {
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.list-style-2 li {
+  padding-bottom: 12px;
+  padding-top: 12px;
+  border-bottom: 1px solid currentColor;
+  border-bottom-color: rgba(from currentColor r g b / 0.2); /* CSS moderno */
+  list-style-type: none;
 }
 
 /*🎚 Separadores y líneas decorativas*/

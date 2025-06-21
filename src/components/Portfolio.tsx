@@ -16,7 +16,7 @@ export default function Portfolio() {
 
   return (
     <section id="portfolio" className="bg-secondary text-white min-vw-80 p-md-5">
-        <h2 className="mb-4 text-center">Mi Portafolio</h2>
+        <h2 className="m-5 text-center">Mi Portafolio</h2>
 
         <div className="d-flex justify-content-center gap-2 mb-4 flex-wrap">
           {categories.map((cat) => (

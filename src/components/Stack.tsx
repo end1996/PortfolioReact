@@ -18,7 +18,7 @@ function Stack() {
   ];
   return (
     <>
-      <section id="stack" className="text-center my-5">
+      <section id="stack" className="text-center m-5">
         <div className="position-relative d-flex text-center mb-5">
           <h2 className="text-132 fw-bold w-100 mb-0 opacity-1">Stack</h2>
           <p className="text-36 fw-bold position-absolute w-100 align-self-center lh-base mb-0">
