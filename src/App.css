@@ -4,9 +4,8 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* #home {
-  background-image: url('./assets/images/fondo.jpg');
-  background-size: cover;
+/* .bg-dark {
+  background-color: #212529 !important;
 } */
 
 #navbar-toggler span {

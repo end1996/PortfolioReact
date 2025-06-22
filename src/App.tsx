@@ -8,13 +8,15 @@ import Profile from "./components/Profile";
 import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
 import AnimatedSection from "./components/AnimatedSection";
+import { Summary } from "./components/Summary";
 
 function App() {
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
-    document.body.className = theme === "light" ? "bg-dark text-white" : "bg-light text-dark";
+    document.body.className =
+      theme === "light" ? "bg-dark text-white" : "bg-light text-dark";
   };
 
   return (
@@ -23,7 +25,7 @@ function App() {
 
       <AnimatedSection
         id="home"
-        className="vh-100 d-flex flex-column align-items-center justify-content-center text-center"
+        className="vh-100 d-flex flex-column align-items-center justify-content-center text-center border"
         preset="slide-up"
         duration={0.8}
         trigger="onLoad"
@@ -31,27 +33,30 @@ function App() {
         <Profile theme={theme} />
       </AnimatedSection>
 
-      <AnimatedSection
-        id="about"
-        className="p-2"
-        preset="slide-left"
-      >
+      <AnimatedSection id="about" className="p-2 border" preset="slide-left">
         <AboutMe />
       </AnimatedSection>
 
-      <Stack />
-
       <AnimatedSection
-        className="p-5 bg-secondary text-white"
-        preset="zoom-in"
-        duration={0.6}
+        id="stack"
+        className="p-5 border"
+        preset="slide-up"
+        delay={0.2}
       >
+        <Stack />
+      </AnimatedSection>
+
+      <AnimatedSection id="summary" preset="slide-up" className="p-5 border">
+        <Summary />
+      </AnimatedSection>
+
+      <AnimatedSection className="p-5 border" preset="zoom-in" duration={0.6}>
         <Portfolio />
       </AnimatedSection>
 
       <AnimatedSection
         id="contact"
-        className="p-5"
+        className="p-5 border"
         preset="slide-up"
         delay={0.2}
       >

@@ -15,14 +15,15 @@ export default function Portfolio() {
       : portfolioProjects.filter((p) => p.category === selectedCategory);
 
   return (
-    <section id="portfolio" className="bg-secondary text-white min-vw-80 p-md-5">
+    <section id="portfolio" className="min-vw-80 p-md-5">
         <h2 className="m-5 text-center">Mi Portafolio</h2>
 
         <div className="d-flex justify-content-center gap-2 mb-4 flex-wrap">
           {categories.map((cat) => (
             <Button
               key={cat}
-              variant={cat === selectedCategory ? "light" : "outline-light"}
+              variant={cat === selectedCategory ? "primary" : "outline-secondary"}
+              //variant="outline-secondary"
               onClick={() => setSelectedCategory(cat)}
             >
               {cat}
