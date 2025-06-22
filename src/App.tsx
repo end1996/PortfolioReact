@@ -25,45 +25,44 @@ function App() {
 
       <AnimatedSection
         id="home"
-        className="vh-100 d-flex flex-column align-items-center justify-content-center text-center border"
-        preset="slide-up"
+        className="vh-100 d-flex flex-column align-items-center justify-content-center text-center"
+        preset="fade-in"
         duration={0.8}
         trigger="onLoad"
       >
         <Profile theme={theme} />
       </AnimatedSection>
 
-      <AnimatedSection id="about" className="p-2 border" preset="slide-left">
+      <AnimatedSection id="about" className="py-5" preset="slide-left">
         <AboutMe />
       </AnimatedSection>
 
       <AnimatedSection
-        id="stack"
-        className="p-5 border"
+        className="py-5"
         preset="slide-up"
         delay={0.2}
       >
         <Stack />
       </AnimatedSection>
 
-      <AnimatedSection id="summary" preset="slide-up" className="p-5 border">
-        <Summary />
+      <AnimatedSection id="summary" preset="slide-up" className="py-5">
+        <Summary theme={theme}/>
       </AnimatedSection>
 
-      <AnimatedSection className="p-5 border" preset="zoom-in" duration={0.6}>
-        <Portfolio />
+      <AnimatedSection id="portfolio" className="py-5" preset="zoom-in" duration={0.6}>
+        <Portfolio theme={theme}/>
       </AnimatedSection>
 
       <AnimatedSection
         id="contact"
-        className="p-5 border"
+        className="py-5"
         preset="slide-up"
         delay={0.2}
       >
         <Contact />
       </AnimatedSection>
 
-      <footer className="text-center py-4 bg-dark text-white">
+      <footer className="text-center py-4 bg-dark text-white w-100">
         <p>&copy; 2025 Enmanuel Nava. Todos los derechos reservados.</p>
       </footer>
     </>

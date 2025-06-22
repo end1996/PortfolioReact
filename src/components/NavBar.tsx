@@ -13,7 +13,8 @@ function NavBar({ theme, toggleTheme }: NavBarProps) {
       variant="dark"
       expand="lg"
       fixed="top"
-      className="py-3 border-bottom border-secondary opacity-75"
+      className="border-bottom border-secondary opacity-75"
+      style={{ padding: "1rem 0" }}
     >
       <Container fluid className="px-4 d-flex justify-content-between align-items-center">
         {/* Brand */}
@@ -48,12 +49,12 @@ function NavBar({ theme, toggleTheme }: NavBarProps) {
             "
           >
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about" className="separator-border opacity-75">About</Nav.Link>
-            <Nav.Link href="#whatido" className="separator-border opacity-75">What I Do</Nav.Link>
-            <Nav.Link href="#resume" className="separator-border opacity-75">Resume</Nav.Link>
-            <Nav.Link href="#portfolio" className="separator-border opacity-75">Portfolio</Nav.Link>
-            <Nav.Link href="#client" className="separator-border opacity-75">Client</Nav.Link>
-            <Nav.Link href="#contact" className="separator-border opacity-75">Contact</Nav.Link>
+            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="#whatido">What I Do</Nav.Link>
+            <Nav.Link href="#resume">Resume</Nav.Link>
+            <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+            <Nav.Link href="#client">Client</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
 

@@ -5,7 +5,11 @@ import RepoLanguages from "./RepoLanguages";
 
 const categories = ["Todos", "Wordpress", "PHP", "Java", "Flutter", "React"];
 
-export default function Portfolio() {
+type PortfolioProps = {
+  theme: string;
+}
+
+export default function Portfolio({ theme }: PortfolioProps) {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -15,8 +19,14 @@ export default function Portfolio() {
       : portfolioProjects.filter((p) => p.category === selectedCategory);
 
   return (
-    <section id="portfolio" className="min-vw-80 p-md-5">
-        <h2 className="m-5 text-center">Mi Portafolio</h2>
+    <div className="container">
+        <div className="position-relative d-flex text-center mb-5">
+          <h2 className="text-132 fw-bold w-100 mb-0 opacity-1">PORTFOLIO</h2>
+          <p className="text-36 fw-bold position-absolute w-100 align-self-center lh-base mb-0">
+            My work
+            <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span>
+          </p>
+        </div>
 
         <div className="d-flex justify-content-center gap-2 mb-4 flex-wrap">
           {categories.map((cat) => (
@@ -36,7 +46,7 @@ export default function Portfolio() {
             <Col xs={12} sm={6} md={4} key={project.id} className="mb-4">
               <Card
                 onClick={() => setSelectedProject(project)}
-                className="h-100 shadow-sm cursor-pointer"
+                className={`h-100 shadow-sm cursor-pointer ${theme == 'light' ? "bg-dark text-white" : "bg-light"}`}
               >
                 <Card.Img variant="top" src={project.image} className="project-img p-2"/>
                 <Card.Body>
@@ -66,6 +76,6 @@ export default function Portfolio() {
             <p>{selectedProject?.description}</p>
           </Modal.Body>
         </Modal>
-    </section>
+    </div>
   );
 }
