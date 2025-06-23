@@ -63,8 +63,10 @@ function App() {
         <Contact />
       </AnimatedSection>
 
-      <footer className="text-center py-4 bg-dark text-white w-100">
-        <p>&copy; 2025 Enmanuel Nava. Todos los derechos reservados.</p>
+      <footer id="footer" className="section">
+        <div className="container">
+          <p className="mb-3 mb-lg-0">&copy; 2025 Enmanuel Nava. Todos los derechos reservados.</p>
+        </div>
       </footer>
     </>
   );

@@ -53,9 +53,9 @@ function AboutMe() {
               <a
                 href="/CV_Enmanuel_Nava_Developer_2025.pdf"
                 download=""
-                className="btn btn-download btn-primary rounded-pill"
+                className="btn button btn-primary rounded-pill"
               >
-                Download CV
+                Descargar CV
               </a>
             </div>
           </div>
