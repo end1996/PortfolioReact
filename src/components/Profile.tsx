@@ -13,7 +13,7 @@ function Profile({ theme }: ProfileProps) {
           <h1 className="text-128 mb-3">Hola, soy Enmanuel</h1>
           <h3 className="text-primary">
             <Typewriter
-              words={['Desarrollador Fullstack', 'Estudiante de ingeniería de software con IA', 'Apasionado por el código.']}
+              words={['Desarrollador Fullstack', 'Estudiante de ingeniería de software con Inteligencia Artificial', 'Apasionado por el código.']}
               loop={0} // 0 = infinito
               cursor
               cursorStyle="|"

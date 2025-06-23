@@ -38,6 +38,7 @@ function App() {
       </AnimatedSection>
 
       <AnimatedSection
+        id="stack"
         className="py-5"
         preset="slide-up"
         delay={0.2}

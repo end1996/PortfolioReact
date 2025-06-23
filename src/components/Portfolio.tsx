@@ -20,7 +20,7 @@ export default function Portfolio({ theme }: PortfolioProps) {
 
   return (
     <div className="container">
-        <div className="position-relative d-flex text-center mb-5">
+        <div className="position-relative d-flex text-center my-5">
           <h2 className="text-132 fw-bold w-100 mb-0 opacity-1">PORTFOLIO</h2>
           <p className="text-36 fw-bold position-absolute w-100 align-self-center lh-base mb-0">
             My work

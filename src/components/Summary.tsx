@@ -2,10 +2,10 @@ type SummaryProps = {
   theme: string;
 };
 
-export function Summary({theme}: SummaryProps) {
+export function Summary({ theme }: SummaryProps) {
   return (
     <div className="container">
-      <div className="position-relative d-flex text-center mb-5">
+      <div className="position-relative d-flex text-center my-5">
         <h2 className="text-132 fw-bold w-100 mb-0 opacity-1">SUMMARY</h2>
         <p className="text-36 fw-bold position-absolute w-100 align-self-center lh-base mb-0">
           Resume
@@ -14,63 +14,93 @@ export function Summary({theme}: SummaryProps) {
       </div>
       <div className="row gx-5 text-start">
         <div className="col-md-6">
-          <h2 className="text-6 fw-600 mb-4">My Education</h2>
-          <div className={`rounded p-4 mb-4 ${theme === 'dark' ? 'bg-light text-dark' : 'bg-dark text-light'}`}>
-            <p className="badge bg-primary text-2 fw-400">2000 - 2004</p>
-            <h3 className="text-5">Computer Science</h3>
-            <p className="text-primary">International University</p>
+          <h2 className="text-6 fw-600 mb-4">Mi Educación</h2>
+          <div
+            className={`rounded p-4 mb-4 ${
+              theme === "dark" ? "bg-light text-dark" : "bg-dark text-light"
+            }`}
+          >
+            <p className="badge bg-primary text-2 fw-400">Actualidad</p>
+            <h3 className="text-5">
+              Ingeniería de software con inteligencia artificial
+            </h3>
+            <p className="text-primary">SENATI</p>
             <p className="mb-0-50">
-              Lisque persius interesset his et, in quot quidam persequeris vim,
-              ad mea essent possim iriure.
+              Actualmente cursando el 5to ciclo de la carrera en modalidad
+              semi-presencial.
             </p>
           </div>
           {/* <div className="border rounded p-4 mb-4"> */}
-          <div className={`rounded p-4 mb-4 ${theme === 'dark' ? 'bg-light text-dark' : 'bg-dark text-light'}`}>
-            <p className="badge bg-primary text-2 fw-400">2005 - 2008</p>
-            <h3 className="text-5">Bachelor Degree</h3>
-            <p className="text-primary">University of California</p>
-            <p className="mb-0-50">
-              Lisque persius interesset his et, in quot quidam persequeris vim,
-              ad mea essent possim iriure.
+          <div
+            className={`rounded p-4 mb-4 ${
+              theme === "dark" ? "bg-light text-dark" : "bg-dark text-light"
+            }`}
+          >
+            <p className="badge bg-primary text-2 fw-400">Mayo 2018</p>
+            <h3 className="text-5">Ingeniería Electrónica</h3>
+            <p className="text-primary">
+              Instituto Universitario Politécnico “Santiago Mariño”{" "}
             </p>
+            <p className="mb-0-50">7mo semestre aprobado.</p>
           </div>
-          <div className={`rounded p-4 mb-4 ${theme === 'dark' ? 'bg-light text-dark' : 'bg-dark text-light'}`}>
-            <p className="badge bg-primary text-2 fw-400">2009 - 2012</p>
-            <h3 className="text-5">Master Degree</h3>
-            <p className="text-primary">Harvard University</p>
+          <div
+            className={`rounded p-4 mb-4 ${
+              theme === "dark" ? "bg-light text-dark" : "bg-dark text-light"
+            }`}
+          >
+            <p className="badge bg-primary text-2 fw-400">Mayo 2014</p>
+            <h3 className="text-5">Técnico medio en informática</h3>
+            <p className="text-primary">
+              Unidad Educativa Arquidiocesana “María Auxiliadora”{" "}
+            </p>
             <p className="mb-0-50">
-              Lisque persius interesset his et, in quot quidam persequeris vim,
-              ad mea essent possim iriure.
+              Titulación de secundaria diversificada en comercio y servicios
+              administrativos mención informática.
             </p>
           </div>
         </div>
         <div className="col-md-6">
-          <h2 className="text-6 fw-600 mb-4">My Experience</h2>
-          <div className={`rounded p-4 mb-4 ${theme === 'dark' ? 'bg-light text-dark' : 'bg-dark text-light'}`}>
-            <p className="badge bg-primary text-2 fw-400">2012 - 2013</p>
-            <h3 className="text-5">Jr. UI UX Designer</h3>
-            <p className="text-primary">Themeforest</p>
-            <p className="mb-0-50">
-              Lisque persius interesset his et, in quot quidam persequeris vim,
-              ad mea essent possim iriure.
+          <h2 className="text-6 fw-600 mb-4">Mi Experiencia</h2>
+          <div
+            className={`rounded p-4 mb-4 ${
+              theme === "dark" ? "bg-light text-dark" : "bg-dark text-light"
+            }`}
+          >
+            <p className="badge bg-primary text-2 fw-400">
+              Febrero 2025 – Junio 2025
             </p>
+            <h3 className="text-5">Practicante de desarrollo web</h3>
+            <p className="text-primary">APM Inversiones E.I.R.L</p>
+            <ul className="mb-0-50">
+              <li>
+                Participar en el desarrollo y mantenimiento de sitios web
+                utilizando HTML, CSS, JavaScript, PHP y React
+              </li>
+              <li>Creación de plugins personalizados para Wordpress</li>
+              <li>Líder de proyecto usando metodología SCRUM</li>
+              <li>
+                Implementar mejoras en la interfaz de usuario para mejorar la
+                experiencia del cliente.
+              </li>
+              <li>
+                Utilizar herramientas como Git y MySQL para el control de
+                versiones y gestión de bases de datos.
+              </li>
+            </ul>
           </div>
-          <div className={`rounded p-4 mb-4 ${theme === 'dark' ? 'bg-light text-dark' : 'bg-dark text-light'}`}>
-            <p className="badge bg-primary text-2 fw-400">2014 - 2016</p>
-            <h3 className="text-5">Jr. Product Designer</h3>
-            <p className="text-primary">Dribbble</p>
+          <div
+            className={`rounded p-4 mb-4 ${
+              theme === "dark" ? "bg-light text-dark" : "bg-dark text-light"
+            }`}
+          >
+            <p className="badge bg-primary text-2 fw-400">Mayo 2022</p>
+            <h3 className="text-5">Asesor técnico</h3>
+            <p className="text-primary">COMDATA</p>
             <p className="mb-0-50">
-              Lisque persius interesset his et, in quot quidam persequeris vim,
-              ad mea essent possim iriure.
-            </p>
-          </div>
-          <div className={`rounded p-4 mb-4 ${theme === 'dark' ? 'bg-light text-dark' : 'bg-dark text-light'}`}>
-            <p className="badge bg-primary text-2 fw-400">2017 - 2019</p>
-            <h3 className="text-5">Product Designer</h3>
-            <p className="text-primary">Adobe</p>
-            <p className="mb-0-50">
-              Lisque persius interesset his et, in quot quidam persequeris vim,
-              ad mea essent possim iriure.
+              Recibir y atender llamadas telefónicas de clientes con un servicio
+              fijo que presenten desperfectos / averías con cualquiera de sus
+              productos contratados, para brindarle las pautas y ayudarlo con su
+              casuística.
             </p>
           </div>
         </div>

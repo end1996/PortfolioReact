@@ -48,13 +48,12 @@ function NavBar({ theme, toggleTheme }: NavBarProps) {
               mt-3 mt-lg-0
             "
           >
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#whatido">What I Do</Nav.Link>
-            <Nav.Link href="#resume">Resume</Nav.Link>
+            <Nav.Link href="#home">Inicio</Nav.Link>
+            <Nav.Link href="#about">Sobre mí</Nav.Link>
+            <Nav.Link href="#stack">Stack</Nav.Link>
+            <Nav.Link href="#summary">Resume</Nav.Link>
             <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-            <Nav.Link href="#client">Client</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
+            <Nav.Link href="#contact">Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>
 
