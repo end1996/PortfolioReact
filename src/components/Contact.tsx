@@ -1,9 +1,7 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import {
-  FaTwitter,
   FaFacebookF,
-  FaDribbble,
   FaGoogle,
   FaGithub,
   FaLinkedin,
@@ -11,11 +9,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 
-type ContactProps = {
-  theme?: string;
-};
-
-function Contact({ theme }: ContactProps) {
+function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
