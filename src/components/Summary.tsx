@@ -1,8 +1,10 @@
+import { themes } from "../utils/themes";
+
 type SummaryProps = {
-  theme: string;
+  themeName: string;
 };
 
-export function Summary({ theme }: SummaryProps) {
+export function Summary({ themeName }: SummaryProps) {
   return (
     <div className="container">
       <div className="position-relative d-flex text-center my-5">
@@ -15,11 +17,7 @@ export function Summary({ theme }: SummaryProps) {
       <div className="row gx-5 text-start">
         <div className="col-md-6">
           <h2 className="text-6 fw-600 mb-4">Mi Educación</h2>
-          <div
-            className={`rounded p-4 mb-4 ${
-              theme === "dark" ? "bg-light text-dark" : "bg-dark text-light"
-            }`}
-          >
+          <div className={`rounded p-4 mb-4 border ${themes[themeName].primary}`}>
             <p className="badge bg-primary text-2 fw-400">Actualidad</p>
             <h3 className="text-5">
               Ingeniería de software con inteligencia artificial
@@ -31,11 +29,7 @@ export function Summary({ theme }: SummaryProps) {
             </p>
           </div>
           {/* <div className="border rounded p-4 mb-4"> */}
-          <div
-            className={`rounded p-4 mb-4 ${
-              theme === "dark" ? "bg-light text-dark" : "bg-dark text-light"
-            }`}
-          >
+          <div className={`rounded p-4 mb-4 border ${themes[themeName].primary}`}>
             <p className="badge bg-primary text-2 fw-400">Mayo 2018</p>
             <h3 className="text-5">Ingeniería Electrónica</h3>
             <p className="text-primary">
@@ -43,11 +37,7 @@ export function Summary({ theme }: SummaryProps) {
             </p>
             <p className="mb-0-50">7mo semestre aprobado.</p>
           </div>
-          <div
-            className={`rounded p-4 mb-4 ${
-              theme === "dark" ? "bg-light text-dark" : "bg-dark text-light"
-            }`}
-          >
+          <div className={`rounded p-4 mb-4 border ${themes[themeName].primary}`}>
             <p className="badge bg-primary text-2 fw-400">Mayo 2014</p>
             <h3 className="text-5">Técnico medio en informática</h3>
             <p className="text-primary">
@@ -61,11 +51,7 @@ export function Summary({ theme }: SummaryProps) {
         </div>
         <div className="col-md-6">
           <h2 className="text-6 fw-600 mb-4">Mi Experiencia</h2>
-          <div
-            className={`rounded p-4 mb-4 ${
-              theme === "dark" ? "bg-light text-dark" : "bg-dark text-light"
-            }`}
-          >
+          <div className={`rounded p-4 mb-4 border ${themes[themeName].primary}`}>
             <p className="badge bg-primary text-2 fw-400">
               Febrero 2025 – Junio 2025
             </p>
@@ -88,11 +74,7 @@ export function Summary({ theme }: SummaryProps) {
               </li>
             </ul>
           </div>
-          <div
-            className={`rounded p-4 mb-4 ${
-              theme === "dark" ? "bg-light text-dark" : "bg-dark text-light"
-            }`}
-          >
+          <div className={`rounded p-4 mb-4 border ${themes[themeName].primary}`}>
             <p className="badge bg-primary text-2 fw-400">Mayo 2022</p>
             <h3 className="text-5">Asesor técnico</h3>
             <p className="text-primary">COMDATA</p>

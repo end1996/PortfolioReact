@@ -8,8 +8,13 @@ import {
   FaPhone,
   FaEnvelope,
 } from "react-icons/fa";
+import { themes } from "../utils/themes";
 
-function Contact() {
+type ContactProps = {
+  themeName: string;
+};
+
+function Contact({ themeName }: ContactProps) {
   const formRef = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -132,7 +137,7 @@ function Contact() {
                 <input
                   name="user_name"
                   type="text"
-                  className="form-control"
+                  className={`form-control ${themes[themeName].primary}`}
                   required
                   placeholder="Nombre"
                 />
@@ -141,7 +146,7 @@ function Contact() {
                 <input
                   name="user_email"
                   type="email"
-                  className="form-control"
+                  className={`form-control ${themes[themeName].primary}`}
                   required
                   placeholder="Correo electrónico"
                 />
@@ -149,7 +154,7 @@ function Contact() {
               <div className="col">
                 <textarea
                   name="message"
-                  className="form-control"
+                  className={`form-control ${themes[themeName].primary}`}
                   rows={5}
                   required
                   placeholder="Dime que necesitas........"

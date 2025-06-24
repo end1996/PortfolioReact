@@ -48,11 +48,11 @@ const toggleTheme = () => {
       </AnimatedSection>
 
       <AnimatedSection id="summary" preset="slide-up" className={`py-5 ${theme.secondary}`}>
-        <Summary theme={theme.secondary}/>
+        <Summary themeName={themeName}/>
       </AnimatedSection>
 
       <AnimatedSection id="portfolio" className={`py-5 ${theme.primary}`} preset="zoom-in" duration={0.6}>
-        <Portfolio theme={theme.primary}/>
+        <Portfolio themeName={themeName}/>
       </AnimatedSection>
 
       <AnimatedSection
@@ -61,7 +61,7 @@ const toggleTheme = () => {
         preset="slide-up"
         delay={0.2}
       >
-        <Contact />
+        <Contact themeName={themeName}/>
       </AnimatedSection>
 
       <footer className={`text-center py-3 ${theme.footer}`}>
