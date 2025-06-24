@@ -18,6 +18,10 @@
   outline: none;
 }
 
+.bg-secondary {
+  background-color: #343a40 !important;
+}
+
 .nav-link {
   color: #fff !important;
   transition: color 0.3s ease;

@@ -1,16 +1,16 @@
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import { FaTwitter, FaFacebookF, FaDribbble } from "react-icons/fa";
+import { FaTwitter, FaFacebookF, FaDribbble, FaLinkedin, FaGithub } from "react-icons/fa";
 
 type NavBarProps = {
-  theme: string;
+  themeName: string;
   toggleTheme: () => void;
 };
 
-function NavBar({ theme, toggleTheme }: NavBarProps) {
+function NavBar({ themeName, toggleTheme }: NavBarProps) {
   return (
     <Navbar
-      bg="dark"
-      variant="dark"
+      bg={themeName === "default" ? "dark" : "default"}
+      variant={themeName === "default" ? "dark" : "default"}
       expand="lg"
       fixed="top"
       className="border-bottom border-secondary opacity-75"
@@ -18,18 +18,18 @@ function NavBar({ theme, toggleTheme }: NavBarProps) {
     >
       <Container fluid className="px-4 d-flex justify-content-between align-items-center">
         {/* Brand */}
-        <Navbar.Brand href="#home" className="fw-bold fs-4">
+        <Navbar.Brand href="#home" className="fw-bold fs-4 text-light">
           Enmanuel
         </Navbar.Brand>
 
         {/* Toggle e íconos en móvil */}
         <div className="d-flex d-lg-none align-items-center gap-2">
           <Button
-            variant={theme === "light" ? "dark" : "light"}
+            variant="outline-light"
             onClick={toggleTheme}
             className="p-1 px-2"
           >
-            {theme === "light" ? "🌙" : "☀️"}
+            {themeName === "default" ? "🌙" : "☀️"}
           </Button>
           <a href="#" className="text-white fs-5"><FaTwitter /></a>
           <a href="#" className="text-white fs-5"><FaFacebookF /></a>
@@ -60,15 +60,15 @@ function NavBar({ theme, toggleTheme }: NavBarProps) {
         {/* Íconos en escritorio */}
         <div className="d-none d-lg-flex align-items-center gap-3 text-white fs-5">
           <Button
-            variant={theme === "light" ? "dark" : "light"}
+            variant="outline-light"
             onClick={toggleTheme}
             className="ms-2"
           >
-            {theme === "light" ? "🌙" : "☀️"}
+            {themeName === "default" ? "🌙" : "☀️"}
           </Button>
-          <a href="#" className="text-white"><FaTwitter /></a>
-          <a href="#" className="text-white"><FaFacebookF /></a>
-          <a href="#" className="text-white"><FaDribbble /></a>
+          <a href="https://www.linkedin.com/in/enmanuel-nava-dev/" target="no-blank"><FaLinkedin /></a>
+          <a href="https://www.facebook.com/enmanuel.navadavila/" target="no-blank"><FaFacebookF /></a>
+          <a href="https://github.com/end1996" target="no-blank"><FaGithub /></a>
         </div>
       </Container>
     </Navbar>
