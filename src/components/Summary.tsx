@@ -16,48 +16,48 @@ export function Summary({ themeName }: SummaryProps) {
       </div>
       <div className="row gx-5 text-start">
         <div className="col-md-6">
-          <h2 className="text-6 fw-600 mb-4">Mi Educación</h2>
-          <div className={`rounded p-4 mb-4 border ${themes[themeName].primary}`}>
-            <p className="badge bg-primary text-2 fw-400">Actualidad</p>
-            <h3 className="text-5">
+          <h2 className="text-24 fw-600 mb-4">Mi Educación</h2>
+          <div className={`rounded p-4 mb-4 ${themeName == "default" ? "border" : "" } ${themes[themeName].primary}`}>
+            <p className="badge bg-primary text-14 fw-400">Actualidad</p>
+            <h3 className="text-21">
               Ingeniería de software con inteligencia artificial
             </h3>
             <p className="text-primary">SENATI</p>
-            <p className="mb-0-50">
+            <p className={`mb-0 ${themeName == "dark" ? "text-white-50" : ""}`}>
               Actualmente cursando el 5to ciclo de la carrera en modalidad
               semi-presencial.
             </p>
           </div>
           {/* <div className="border rounded p-4 mb-4"> */}
-          <div className={`rounded p-4 mb-4 border ${themes[themeName].primary}`}>
-            <p className="badge bg-primary text-2 fw-400">Mayo 2018</p>
-            <h3 className="text-5">Ingeniería Electrónica</h3>
+          <div className={`rounded p-4 mb-4 ${themeName == "default" ? "border" : "" } ${themes[themeName].primary}`}>
+            <p className="badge bg-primary text-14 fw-400">Mayo 2018</p>
+            <h3 className="text-21">Ingeniería Electrónica</h3>
             <p className="text-primary">
               Instituto Universitario Politécnico “Santiago Mariño”{" "}
             </p>
-            <p className="mb-0-50">7mo semestre aprobado.</p>
+            <p className={`mb-0 ${themeName == "dark" ? "text-white-50" : ""}`}>7mo semestre aprobado.</p>
           </div>
-          <div className={`rounded p-4 mb-4 border ${themes[themeName].primary}`}>
-            <p className="badge bg-primary text-2 fw-400">Mayo 2014</p>
-            <h3 className="text-5">Técnico medio en informática</h3>
+          <div className={`rounded p-4 mb-4 ${themeName == "default" ? "border" : "" } ${themes[themeName].primary}`}>
+            <p className="badge bg-primary text-14 fw-400">Mayo 2014</p>
+            <h3 className="text-21">Técnico medio en informática</h3>
             <p className="text-primary">
               Unidad Educativa Arquidiocesana “María Auxiliadora”{" "}
             </p>
-            <p className="mb-0-50">
+            <p className={`mb-0 ${themeName == "dark" ? "text-white-50" : ""}`}>
               Titulación de secundaria diversificada en comercio y servicios
               administrativos mención informática.
             </p>
           </div>
         </div>
         <div className="col-md-6">
-          <h2 className="text-6 fw-600 mb-4">Mi Experiencia</h2>
-          <div className={`rounded p-4 mb-4 border ${themes[themeName].primary}`}>
-            <p className="badge bg-primary text-2 fw-400">
+          <h2 className="text-24 fw-600 mb-4">Mi Experiencia</h2>
+          <div className={`rounded p-4 mb-4 ${themeName == "default" ? "border" : "" } ${themes[themeName].primary}`}>
+            <p className="badge bg-primary text-14 fw-400">
               Febrero 2025 – Junio 2025
             </p>
-            <h3 className="text-5">Practicante de desarrollo web</h3>
+            <h3 className="text-21">Practicante de desarrollo web</h3>
             <p className="text-primary">APM Inversiones E.I.R.L</p>
-            <ul className="mb-0-50">
+            <ul className={`mb-0 ${themeName == "dark" ? "text-white-50" : ""}`}>
               <li>
                 Participar en el desarrollo y mantenimiento de sitios web
                 utilizando HTML, CSS, JavaScript, PHP y React
@@ -74,11 +74,11 @@ export function Summary({ themeName }: SummaryProps) {
               </li>
             </ul>
           </div>
-          <div className={`rounded p-4 mb-4 border ${themes[themeName].primary}`}>
-            <p className="badge bg-primary text-2 fw-400">Mayo 2022</p>
-            <h3 className="text-5">Asesor técnico</h3>
+          <div className={`rounded p-4 mb-4 ${themeName == "default" ? "border" : "" } ${themes[themeName].primary}`}>
+            <p className="badge bg-primary text-14 fw-400">Mayo 2022</p>
+            <h3 className="text-21">Asesor técnico</h3>
             <p className="text-primary">COMDATA</p>
-            <p className="mb-0-50">
+            <p className={`mb-0 ${themeName == "dark" ? "text-white-50" : ""}`}>
               Recibir y atender llamadas telefónicas de clientes con un servicio
               fijo que presenten desperfectos / averías con cualquiera de sus
               productos contratados, para brindarle las pautas y ayudarlo con su

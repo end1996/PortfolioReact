@@ -50,15 +50,11 @@ function Contact({ themeName }: ContactProps) {
       </div>
       <div className="row gy-5">
         <div className="col-md-4 col-xl-3 order-1 order-md-0 text-center text-md-start">
-          <h2 className="mb-3 text-5 text-uppercase">Dirección</h2>
-          <p className="text-3 mb-4">
-            Pasaje Los Sauces,
-            <br />
-            Mz F Lote 7.
-            <br />
+          <h2 className="mb-3 text-21 text-uppercase">Dirección</h2>
+          <p className="text-16 mb-4">
             Santiago de Surco, Lima, Perú
           </p>
-          <p className="text-3 mb-1">
+          <p className="text-16 mb-1">
             <span className="text-primary text-4 me-2">
               <i className="fas fa-phone">
                 <FaPhone />
@@ -66,7 +62,7 @@ function Contact({ themeName }: ContactProps) {
             </span>
             (+51) 984101254
           </p>
-          <p className="text-3 mb-4">
+          <p className="text-16 mb-4">
             <span className="text-primary text-4 me-2">
               <i className="fas fa-envelope">
                 <FaEnvelope />
@@ -74,7 +70,7 @@ function Contact({ themeName }: ContactProps) {
             </span>
             end199615@gmail.com
           </p>
-          <h2 className="mb-3 text-5 text-uppercase">Sígueme</h2>
+          <h2 className="mb-3 text-21 text-uppercase">Sígueme</h2>
           <ul className="social-icons justify-content-center justify-content-md-start social-icons-muted">
             <li className="social-icons-linkedin">
               <a
@@ -89,7 +85,7 @@ function Contact({ themeName }: ContactProps) {
             </li>
             <li className="social-icons-facebook">
               <a
-                href="http://www.facebook.com/harnishdesign/"
+                href="https://www.facebook.com/enmanuel.navadavila"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -98,20 +94,9 @@ function Contact({ themeName }: ContactProps) {
                 </i>
               </a>
             </li>
-            <li className="social-icons-google">
-              <a
-                href="http://www.google.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-google">
-                  <FaGoogle />
-                </i>
-              </a>
-            </li>
             <li className="social-icons-github">
               <a
-                href="http://www.github.com/"
+                href="https://github.com/end1996"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -123,7 +108,7 @@ function Contact({ themeName }: ContactProps) {
           </ul>
         </div>
         <div className="col-md-8 col-xl-9 order-0 order-md-1">
-          <h2 className="mb-3 text-5 text-uppercase text-center text-md-start">
+          <h2 className="mb-3 text-21 text-uppercase text-center text-md-start">
             Déjame un mensaje
           </h2>
           <form
