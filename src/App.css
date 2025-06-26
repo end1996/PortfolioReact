@@ -294,4 +294,8 @@
   .text-132 {
     font-size: 3rem;
   }
+
+  #behind-text {
+    display: none;
+  }
 }
