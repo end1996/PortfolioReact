@@ -51,7 +51,7 @@ function NavBar({ themeName, toggleTheme }: NavBarProps) {
             <Nav.Link href="#home">Inicio</Nav.Link>
             <Nav.Link href="#about">Sobre mí</Nav.Link>
             <Nav.Link href="#stack">Stack</Nav.Link>
-            <Nav.Link href="#summary">Resume</Nav.Link>
+            <Nav.Link href="#summary">Curriculum</Nav.Link>
             <Nav.Link href="#portfolio">Portfolio</Nav.Link>
             <Nav.Link href="#contact">Contacto</Nav.Link>
           </Nav>
@@ -66,9 +66,9 @@ function NavBar({ themeName, toggleTheme }: NavBarProps) {
           >
             {themeName === "default" ? "🌙" : "☀️"}
           </Button>
-          <a href="https://www.linkedin.com/in/enmanuel-nava-dev/" className="text-light navbar-icons" target="no-blank"><FaLinkedin /></a>
-          <a href="https://www.facebook.com/enmanuel.navadavila/" className="text-light navbar-icons" target="no-blank"><FaFacebookF /></a>
-          <a href="https://github.com/end1996" className="text-light navbar-icons" target="no-blank"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/enmanuel-nava-dev/" className="text-light navbar-icons link-primary" target="no-blank"><FaLinkedin /></a>
+          <a href="https://www.facebook.com/enmanuel.navadavila/" className="text-light navbar-icons link-primary" target="no-blank"><FaFacebookF /></a>
+          <a href="https://github.com/end1996" className="text-light navbar-icons link-primary" target="no-blank"><FaGithub /></a>
         </div>
       </Container>
     </Navbar>

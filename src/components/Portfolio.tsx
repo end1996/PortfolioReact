@@ -3,6 +3,7 @@ import { portfolioProjects, type Project } from "../data/portfolioData";
 import { Button, Row, Col, Modal, Card } from "react-bootstrap";
 import RepoLanguages from "./RepoLanguages";
 import { themes } from "../utils/themes";
+import { FaGithub } from "react-icons/fa";
 
 const categories = ["Todos", "Wordpress", "PHP", "Java", "Flutter", "React"];
 
@@ -47,14 +48,25 @@ export default function Portfolio({ themeName }: PortfolioProps) {
           <Col xs={12} sm={6} md={4} key={project.id} className="mb-4">
             <Card
               onClick={() => setSelectedProject(project)}
-              className={`h-100 border ${themes[themeName].secondary}`}
+              className={`h-100 ${themes[themeName].secondary}`}
             >
               <Card.Img
                 variant="top"
                 src={project.image}
                 className="project-img p-2"
               />
-              <Card.Body>
+              <Card.Body className="position-relative">
+                {project.repo && (
+                  <a
+                    href={`https://github.com/${project.repo}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="position-absolute top-0 end-0 m-2 text-dark fs-4 link-primary"
+                  >
+                    <FaGithub/>
+                  </a>
+                )}
+
                 <Card.Title>{project.title}</Card.Title>
                 <Card.Text>{project.category}</Card.Text>
                 <Card.Footer>
