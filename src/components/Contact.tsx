@@ -2,7 +2,6 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import {
   FaFacebookF,
-  FaGoogle,
   FaGithub,
   FaLinkedin,
   FaPhone,
@@ -51,9 +50,7 @@ function Contact({ themeName }: ContactProps) {
       <div className="row gy-5">
         <div className="col-md-4 col-xl-3 order-1 order-md-0 text-center text-md-start">
           <h2 className="mb-3 text-21 text-uppercase">Dirección</h2>
-          <p className="text-16 mb-4">
-            Santiago de Surco, Lima, Perú
-          </p>
+          <p className="text-16 mb-4">Santiago de Surco, Lima, Perú</p>
           <p className="text-16 mb-1">
             <span className="text-primary text-4 me-2">
               <i className="fas fa-phone">
