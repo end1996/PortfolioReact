@@ -6,8 +6,8 @@ function Profile() {
     <>
       <div className="row align-items-center justify-content-center w-100 h-100">
         <div className="col-lg-8 text-center">
-          <h1 className="text-128 mb-3">Hola, soy Enmanuel</h1>
-          <h3 className="text-primary">
+          <h1 className="display-3 mb-3 mt-4 text-white">Hola, soy Enmanuel</h1>
+          <h3 className="display-4 text-primary">
             <Typewriter
               words={[
                 "Desarrollador Fullstack",

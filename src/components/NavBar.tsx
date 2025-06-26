@@ -31,9 +31,9 @@ function NavBar({ themeName, toggleTheme }: NavBarProps) {
           >
             {themeName === "default" ? "🌙" : "☀️"}
           </Button>
-          <a href="#" className="text-white fs-5"><FaTwitter /></a>
-          <a href="#" className="text-white fs-5"><FaFacebookF /></a>
-          <a href="#" className="text-white fs-5"><FaDribbble /></a>
+          <a href="https://www.linkedin.com/in/enmanuel-nava-dev/" className="text-light navbar-icons" target="no-blank"><FaLinkedin /></a>
+          <a href="https://www.facebook.com/enmanuel.navadavila/" className="text-light navbar-icons" target="no-blank"><FaFacebookF /></a>
+          <a href="https://github.com/end1996" className="text-light navbar-icons" target="no-blank"><FaGithub /></a>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
         </div>
 
@@ -66,9 +66,9 @@ function NavBar({ themeName, toggleTheme }: NavBarProps) {
           >
             {themeName === "default" ? "🌙" : "☀️"}
           </Button>
-          <a href="https://www.linkedin.com/in/enmanuel-nava-dev/" target="no-blank"><FaLinkedin /></a>
-          <a href="https://www.facebook.com/enmanuel.navadavila/" target="no-blank"><FaFacebookF /></a>
-          <a href="https://github.com/end1996" target="no-blank"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/enmanuel-nava-dev/" className="text-light navbar-icons" target="no-blank"><FaLinkedin /></a>
+          <a href="https://www.facebook.com/enmanuel.navadavila/" className="text-light navbar-icons" target="no-blank"><FaFacebookF /></a>
+          <a href="https://github.com/end1996" className="text-light navbar-icons" target="no-blank"><FaGithub /></a>
         </div>
       </Container>
     </Navbar>
