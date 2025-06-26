@@ -1,5 +1,6 @@
 import { Typewriter } from "react-simple-typewriter";
 import profile from "../assets/images/profile.jpg";
+import { FaArrowDown } from "react-icons/fa";
 
 function Profile() {
   return (
@@ -27,6 +28,11 @@ function Profile() {
           <img src={profile} alt="Perfil" />
         </div>
       </div>
+      <a href="#about" className="scroll-down-arrow text-white smooth-scroll pb-2 fs-2">
+        <span>
+          <FaArrowDown className="pulse"/>
+        </span>
+      </a>
     </>
   );
 }

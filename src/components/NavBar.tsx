@@ -1,5 +1,5 @@
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import { FaTwitter, FaFacebookF, FaDribbble, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaLinkedin, FaGithub } from "react-icons/fa";
 
 type NavBarProps = {
   themeName: string;
