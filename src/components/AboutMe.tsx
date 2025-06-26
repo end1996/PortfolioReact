@@ -16,16 +16,17 @@ function AboutMe() {
               desarrollador fullstack
             </h2>
             <p className="opacity-75 text-16">
-              Soy un apasionado del desarrollo web con experiencia en
-              tecnologías modernas. Me especializo en crear aplicaciones web
+              Soy un apasionado del desarrollo web y móvil con experiencia en
+              tecnologías modernas. Me especializo en crear aplicaciones
               dinámicas y eficientes, utilizando herramientas como React y
-              Flutter.
+              Flutter. Además poseo habilidad en análisis de datos con
+              inteligencia artificial con Python y Java.
             </p>
             <p className="opacity-75 text-16">
               Me encanta aprender y adaptarme a nuevas tecnologías, siempre
               buscando mejorar mis habilidades y ofrecer soluciones innovadoras.
               Mi objetivo es contribuir al desarrollo de proyectos que impacten
-              positivamente a los usuarios y a la comunidad.
+              positivamente a los usuarios y la comunidad.
             </p>
           </div>
           <div className="col-lg-5 col-xl-4 text-lg-start">
