@@ -34,31 +34,31 @@ const toggleTheme = () => {
         <Profile />
       </AnimatedSection>
 
-      <AnimatedSection id="about" className={`py-5 ${theme.secondary}`} preset="slide-left">
+      <AnimatedSection id="about" className={`py-5 ${theme.secondary}`} preset="fade-in">
         <AboutMe />
       </AnimatedSection>
 
       <AnimatedSection
         id="stack"
         className={`py-5 ${theme.primary}`}
-        preset="slide-up"
+        preset="fade-in"
         delay={0.2}
       >
         <Stack />
       </AnimatedSection>
 
-      <AnimatedSection id="summary" preset="slide-up" className={`py-5 ${theme.secondary}`}>
+      <AnimatedSection id="summary" preset="fade-in" className={`py-5 ${theme.secondary}`}>
         <Summary themeName={themeName}/>
       </AnimatedSection>
 
-      <AnimatedSection id="portfolio" className={`py-5 ${theme.primary}`} preset="zoom-in" duration={0.6}>
+      <AnimatedSection id="portfolio" className={`py-5 ${theme.primary}`} preset="fade-in" duration={0.6}>
         <Portfolio themeName={themeName}/>
       </AnimatedSection>
 
       <AnimatedSection
         id="contact"
         className={`py-5 ${theme.secondary}`}
-        preset="slide-up"
+        preset="fade-in"
         delay={0.2}
       >
         <Contact themeName={themeName}/>

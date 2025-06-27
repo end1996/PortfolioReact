@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
-type Preset = "fade-in" | "slide-up" | "slide-left" | "zoom-in";
+type Preset = "fade-in" | "slide-up" | "slide-left" | "zoom-in" | "slide-right";
 
 type AnimatedSectionProps = {
   id?: string;
@@ -25,6 +25,10 @@ const animationPresets: Record<Preset, any> = {
   },
   "slide-left": {
     initial: { opacity: 0, x: -100 },
+    whileInView: { opacity: 1, x: 0 },
+  },
+  "slide-right": {
+    initial : { opacity: 0, x: 100 },
     whileInView: { opacity: 1, x: 0 },
   },
   "zoom-in": {

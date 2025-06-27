@@ -290,8 +290,7 @@
 @media (max-width: 768px) {
 
   .perfil img {
-    width: 250px;
-    height: 350px;
+    padding: 20px;
   }
 
   .text-132 {
