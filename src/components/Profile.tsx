@@ -1,5 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
-import profile from "../assets/images/profile.jpg";
+import profile from "../assets/images/profile-azul.jpg";
 import { FaArrowDown } from "react-icons/fa";
 
 function Profile() {
@@ -7,12 +7,12 @@ function Profile() {
     <>
       <div className="row align-items-center justify-content-center w-100 h-100">
         <div className="col-lg-8 text-center">
-          <h1 className="display-3 mb-3 mt-4 text-white">Hola, soy Enmanuel</h1>
-          <h3 className="display-4 text-primary">
+          <h2 className="mb-3 mt-4 text-white mb-md-3 text-center">Hola, soy Enmanuel</h2>
+          <h3 className="text-calc text-white mb-2">
             <Typewriter
               words={[
-                "Desarrollador Fullstack",
-                "Estudiante de ingeniería de software con Inteligencia Artificial",
+                "Desarrollador Fullstack.",
+                "Estudiante de ingeniería de software con IA.",
                 "Apasionado por el código.",
               ]}
               loop={0} // 0 = infinito
