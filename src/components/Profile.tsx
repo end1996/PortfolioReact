@@ -8,7 +8,7 @@ function Profile() {
       <div className="row align-items-center justify-content-center w-100 h-100">
         <div className="col-lg-8 text-center">
           <h2 className="mb-3 mt-4 text-white mb-md-3 text-center">Hola, soy Enmanuel</h2>
-          <h3 className="text-calc text-white mb-2">
+          <h3 className="text-calc text-white mb-2" style={{minHeight: "3.75rem"}}>
             <Typewriter
               words={[
                 "Desarrollador Fullstack.",
