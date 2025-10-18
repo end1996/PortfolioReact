@@ -54,6 +54,7 @@ export default function Portfolio({ themeName }: PortfolioProps) {
                 variant="top"
                 src={project.image}
                 className="project-img p-2"
+                alt={project.alt}
               />
               <Card.Body className="position-relative">
                 {project.repo && (

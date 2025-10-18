@@ -11,6 +11,7 @@ import javascript from './javascript.svg';
 import java from './java.svg';
 import python from './python.svg';
 import typescript from './typescript.svg';
+import springboot from './springboot.svg';
 
 export const techIcons = {
     react,
@@ -25,5 +26,6 @@ export const techIcons = {
     javascript,
     java,
     python,
-    typescript
+    typescript,
+    springboot,
 };

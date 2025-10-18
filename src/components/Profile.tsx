@@ -1,5 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
-import profile from "../assets/images/profile-azul.jpg";
+import profile from "../assets/images/profile-azul.webp";
 import { FaArrowDown } from "react-icons/fa";
 
 function Profile() {

@@ -11,5 +11,3 @@ export const projectImages = {
     peliculas,
     portfolio,
 };
-
-console.log("Project images loaded:", projectImages);
