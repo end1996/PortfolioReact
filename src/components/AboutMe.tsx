@@ -1,9 +1,16 @@
+import { getAge } from "../utils/getAge";
+
 function AboutMe() {
   return (
     <>
       <div className="container">
         <div className="position-relative d-flex text-center my-5">
-          <h2 id="behind-text"className="text-132 fw-bold w-100 mb-0 opacity-1">SOBRE MÍ</h2>
+          <h2
+            id="behind-text"
+            className="text-132 fw-bold w-100 mb-0 opacity-1"
+          >
+            SOBRE MÍ
+          </h2>
           <p className="text-36 fw-bold position-absolute w-100 align-self-center lh-base mb-0">
             Conóceme
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span>
@@ -13,14 +20,14 @@ function AboutMe() {
           <div className="col-lg-7 col-xl-8 text-center text-lg-start">
             <h2 className="text-28 fw-bold mb-3">
               Soy <span className="text-primary">Enmanuel Nava,</span> un
-              desarrollador fullstack
+              desarrollador FullStack
             </h2>
             <p className="opacity-75 text-16">
               Soy un apasionado del desarrollo web y móvil con experiencia en
               tecnologías modernas. Me especializo en crear aplicaciones
-              dinámicas y eficientes, utilizando herramientas como React y
-              Flutter. Además poseo habilidad en análisis de datos con
-              inteligencia artificial con Python y Java.
+              dinámicas y eficientes, utilizando herramientas como React,
+              Flutter y Spring Boot. Además poseo habilidad en análisis de datos
+              con inteligencia artificial con Python y Java.
             </p>
             <p className="opacity-75 text-16">
               Me encanta aprender y adaptarme a nuevas tecnologías, siempre
@@ -44,7 +51,7 @@ function AboutMe() {
                 </li>
                 <li>
                   <span className="fw-bold me-2">Edad:</span>
-                  <span className="opacity-75">28</span>
+                  <span className="opacity-75">{getAge("1996/09/21")}</span>
                 </li>
                 <li className="border-0">
                   <span className="fw-bold me-2">De:</span>

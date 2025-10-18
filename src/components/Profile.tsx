@@ -11,7 +11,7 @@ function Profile() {
           <h3 className="text-calc text-white mb-2" style={{minHeight: "3.75rem"}}>
             <Typewriter
               words={[
-                "Desarrollador Fullstack.",
+                "Desarrollador FullStack.",
                 "Estudiante de ingeniería de software con IA.",
                 "Apasionado por el código.",
               ]}

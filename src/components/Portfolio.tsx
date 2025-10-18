@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { portfolioProjects, type Project } from "../data/portfolioData";
 import { Button, Row, Col, Modal, Card } from "react-bootstrap";
-import RepoLanguages from "./RepoLanguages";
+import RepoLanguages from "../api/RepoLanguages";
 import { themes } from "../utils/themes";
 import { FaGithub } from "react-icons/fa";
 

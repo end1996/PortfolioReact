@@ -6,9 +6,9 @@ import Stack from "./components/Stack";
 import AboutMe from "./components/AboutMe";
 import Profile from "./components/Profile";
 import Contact from "./components/Contact";
-import NavBar from "./components/NavBar";
-import AnimatedSection from "./components/AnimatedSection";
-import { Summary } from "./components/Summary";
+import NavBar from "./components/shared/NavBar";
+import AnimatedSection from "./components/shared/AnimatedSection";
+import { Summary } from "./components/Summary/index";
 import { themes } from "./utils/themes";
 
 function App() {
