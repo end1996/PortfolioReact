@@ -1,6 +1,15 @@
 import { getAge } from "../utils/getAge";
+import ReactGa from "react-ga4";
 
 function AboutMe() {
+
+  const handleCVDownload = () => {
+    ReactGa.event({
+      category: 'Interacción clave',
+      action: "Descarga CV",
+      label: 'CV Principal (Resumen)'
+    })
+  }
   return (
     <>
       <div className="container">
@@ -60,8 +69,9 @@ function AboutMe() {
               </ul>
               <a
                 href="/CV_Enmanuel_Nava_Developer_2025.pdf"
-                download=""
+                download
                 className="btn button btn-primary rounded-pill"
+                onClick={handleCVDownload}
               >
                 Descargar CV
               </a>

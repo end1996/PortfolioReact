@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReactGa from "react-ga4";
 import { portfolioProjects, type Project } from "../data/portfolioData";
 import { Button, Row, Col, Modal, Card } from "react-bootstrap";
 import RepoLanguages from "../api/RepoLanguages";
@@ -20,10 +21,25 @@ export default function Portfolio({ themeName }: PortfolioProps) {
       ? portfolioProjects
       : portfolioProjects.filter((p) => p.category === selectedCategory);
 
+  /**
+   * Registra un evento cuando el usuario hace clic para ver el código de un proyecto.
+   * @param projectName El nombre del proyecto para usarlo como 'label' en GA4.
+   */
+  const handleViewCode = (projectName: string) => {
+    ReactGa.event({
+      category: 'Portfolio',
+      action: 'Ver código',
+      label: projectName
+    })
+    console.log("Evento recibido");
+  }
+
   return (
     <div className="container">
       <div className="position-relative d-flex text-center my-5">
-        <h2 id="behind-text" className="text-132 fw-bold w-100 mb-0 opacity-1">PORTFOLIO</h2>
+        <h2 id="behind-text" className="text-132 fw-bold w-100 mb-0 opacity-1">
+          PORTFOLIO
+        </h2>
         <p className="text-36 fw-bold position-absolute w-100 align-self-center lh-base mb-0">
           Proyectos
           <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span>
@@ -63,8 +79,9 @@ export default function Portfolio({ themeName }: PortfolioProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="position-absolute top-0 end-0 m-2 text-dark fs-4 link-primary"
+                    onClick={() => handleViewCode(project.title)}
                   >
-                    <FaGithub/>
+                    <FaGithub />
                   </a>
                 )}
 
