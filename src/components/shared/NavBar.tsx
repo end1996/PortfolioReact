@@ -1,5 +1,6 @@
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { FaFacebookF, FaLinkedin, FaGithub } from "react-icons/fa";
+import ReactGa from 'react-ga4';
 
 type NavBarProps = {
   themeName: string;
@@ -7,6 +8,39 @@ type NavBarProps = {
 };
 
 function NavBar({ themeName, toggleTheme }: NavBarProps) {
+
+  // Manejar clics de navegación interna
+  const handleNavClick = (sectionId: string) => {
+    ReactGa.event({
+      category: 'Navegación interna',
+      action: 'Clic en Menú',
+      label: sectionId
+    });
+    console.log(`GA Event: Nav Click - ${sectionId}`);
+  }
+
+  // Manejar clics en enlaces sociales/externos
+  const handleSocialClick = (socialName: string) => {
+    ReactGa.event({
+      category: 'Enlaces externos',
+      action: 'Clic en Social',
+      label: socialName
+    })
+    console.log(`GA Event: Social Click - ${socialName}`);
+  }
+
+  // Manejar el cambio de tema}
+  const handleThemeToggle = () => {
+    toggleTheme();
+    const newTheme = themeName === "default" ? "Dark" : "Light";
+    ReactGa.event({
+      category: "Interacción",
+      action: 'Cambio de Tema',
+      label: `Cambiado a ${newTheme}`
+    });
+    console.log(`GA Event: Theme Toggle - ${newTheme}`); 
+  }
+
   return (
     <Navbar
       bg={themeName === "default" ? "dark" : "default"}

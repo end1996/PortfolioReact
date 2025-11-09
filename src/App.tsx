@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ReactGa from 'react-ga4';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Portfolio from "./components/Portfolio";
@@ -15,6 +16,18 @@ function App() {
 const [themeName, setThemeName] = useState("default");
 const theme = themes[themeName];
 
+// Hook para registrar la vista de página inicial
+useEffect(() => {
+  // Envía la vista de página inicial a GA4
+  ReactGa.send({
+    hitType: "pageview",
+    page: window.location.pathname + window.location.search,
+    title: document.title
+  })
+  console.log("G4A Pageview Sent: ", window.location.pathname);
+}, []); // Asegurar que se ejecute una sola vez
+
+
 const toggleTheme = () => {
   const next = themeName === "default" ? "dark" : "default";
   setThemeName(next);
@@ -23,6 +36,8 @@ const toggleTheme = () => {
   return (
     <>
       <NavBar themeName={themeName} toggleTheme={toggleTheme} />
+
+      {/* --- Secciones del Portafolio --- */}
 
       <AnimatedSection
         id="home"
@@ -64,6 +79,7 @@ const toggleTheme = () => {
         <Contact themeName={themeName}/>
       </AnimatedSection>
 
+      {/* --- Footer --- */}  
       <footer className={`text-center py-3 ${theme.footer}`}>
         <div className="container">
           <p className="mb-3 mb-lg-0">&copy; 2025 Enmanuel Nava. Todos los derechos reservados.</p>
