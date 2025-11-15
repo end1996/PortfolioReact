@@ -27,12 +27,12 @@ export default function Portfolio({ themeName }: PortfolioProps) {
    */
   const handleViewCode = (projectName: string) => {
     ReactGa.event({
-      category: 'Portfolio',
-      action: 'Ver código',
-      label: projectName
-    })
+      category: "Portfolio",
+      action: "Ver código",
+      label: projectName,
+    });
     console.log("Evento recibido");
-  }
+  };
 
   return (
     <div className="container">
@@ -101,7 +101,10 @@ export default function Portfolio({ themeName }: PortfolioProps) {
                 <Card.Title>{project.title}</Card.Title>
                 <Card.Text>{project.category}</Card.Text>
                 <Card.Footer>
-                  <RepoLanguages repo={project.repo} />
+                  <RepoLanguages
+                    repo={project.repo}
+                    manualLanguages={project.manualLanguages}
+                  />
                 </Card.Footer>
               </Card.Body>
             </Card>

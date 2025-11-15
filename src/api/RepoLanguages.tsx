@@ -1,17 +1,21 @@
 import GitHubLanguagesBar from "./GitHubLanguagesBar";
 
 interface RepoLanguagesProps {
-    repo?: string;
+  repo?: string;
+  manualLanguages?: Record<string, number>;
 }
 
-function RepoLanguages({ repo }: RepoLanguagesProps) {
-    if (!repo) return null;
-
+function RepoLanguages({ repo, manualLanguages }: RepoLanguagesProps) {
+  if (manualLanguages) {
     return (
-        <GitHubLanguagesBar repo={repo} />
-    )
-    
+      <GitHubLanguagesBar repo={repo ?? ""} manualLanguages={manualLanguages} />
+    );
+  }
+  // Si no hay repo ni manual, no mostrar nada
+  if (!repo) return null;
+
+  // Si hay repo público, usar GitHub API
+  return <GitHubLanguagesBar repo={repo} />;
 }
 
 export default RepoLanguages;
-
