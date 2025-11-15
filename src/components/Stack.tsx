@@ -5,6 +5,7 @@ function Stack() {
     { name: "React", icon: techIcons.react },
     { name: "Flutter", icon: techIcons.flutter },
     { name: "Bootstrap", icon: techIcons.bootstrap },
+    { name: "Tailwind", icon: techIcons.tailwind },
     { name: "Spring Boot", icon: techIcons.springboot },
     { name: "WordPress", icon: techIcons.wordpress },
     { name: "HTML", icon: techIcons.html },

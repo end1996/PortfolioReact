@@ -1,6 +1,7 @@
 import react from './react.svg';
 import flutter from './flutter.svg';
 import bootstrap from './bootstrap-logo.svg';
+import tailwind from './tailwind.svg';
 import git from './git.svg';
 import html from './html.svg';
 import css from './css.svg';
@@ -17,6 +18,7 @@ export const techIcons = {
     react,
     flutter,
     bootstrap,
+    tailwind,
     git,
     html,
     css,

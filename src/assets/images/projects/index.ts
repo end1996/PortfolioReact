@@ -3,6 +3,10 @@ import agencia from './agenciaViajes.gif';
 import tareas from './gestionTareas.gif';
 import peliculas from './peliculas_en_cines.gif';
 import portfolio from './portfolio.gif';
+import catalogo from './catalogo.gif';
+import catalogoLibros from './generadorCatalogo_V1.gif';
+import sistemaInventario from './sistemaInventario_V1.gif';
+import landingPage from './fastSolution.gif';
 
 export const projectImages = {
     webForm,
@@ -10,4 +14,8 @@ export const projectImages = {
     tareas,
     peliculas,
     portfolio,
+    catalogo,
+    catalogoLibros,
+    sistemaInventario,
+    landingPage
 };
