@@ -66,12 +66,25 @@ export default function Portfolio({ themeName }: PortfolioProps) {
               onClick={() => setSelectedProject(project)}
               className={`h-100 ${themes[themeName].secondary}`}
             >
-              <Card.Img
-                variant="top"
-                src={project.image}
-                className="project-img p-2"
-                alt={project.alt}
-              />
+              {project.type === "video" ? (
+                <video
+                  className="project-img p-2 w-100"
+                  src={project.image}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  style={{ borderRadius: "0.5rem" }}
+                />
+              ) : (
+                <Card.Img
+                  variant="top"
+                  src={project.image}
+                  className="project-img p-2"
+                  alt={project.alt}
+                />
+              )}
+
               <Card.Body className="position-relative">
                 {project.repo && (
                   <a
@@ -100,16 +113,30 @@ export default function Portfolio({ themeName }: PortfolioProps) {
         show={selectedProject !== null}
         onHide={() => setSelectedProject(null)}
         centered
+        dialogClassName="modal-90w"
       >
         <Modal.Header closeButton>
           <Modal.Title>{selectedProject?.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img
-            src={selectedProject?.image}
-            className="img-fluid mb-3"
-            alt={selectedProject?.title}
-          />
+          {selectedProject?.type === "video" ? (
+            <video
+              src={selectedProject?.image}
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="w-100"
+              style={{ borderRadius: "0.5rem" }}
+            />
+          ) : (
+            <img
+              src={selectedProject?.image}
+              className="img-fluid mb-3"
+              alt={selectedProject?.title}
+            />
+          )}
           <p>{selectedProject?.description}</p>
         </Modal.Body>
       </Modal>

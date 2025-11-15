@@ -137,3 +137,15 @@ i {
 i:hover {
     color: #007bff; /* Cambia el color del ícono al hacer hover */
 }
+
+.modal-90w {
+  max-width: 90% !important;
+}
+
+.modal-90w .modal-body video,
+.modal-90w .modal-body img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+

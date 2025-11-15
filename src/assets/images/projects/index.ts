@@ -7,6 +7,7 @@ import catalogo from './catalogo.gif';
 import catalogoLibros from './generadorCatalogo_V1.gif';
 import sistemaInventario from './sistemaInventario_V1.gif';
 import landingPage from './fastSolution.gif';
+import apiRest from './DemoSwagger2.mp4';
 
 export const projectImages = {
     webForm,
@@ -17,5 +18,6 @@ export const projectImages = {
     catalogo,
     catalogoLibros,
     sistemaInventario,
-    landingPage
+    landingPage,
+    apiRest
 };
