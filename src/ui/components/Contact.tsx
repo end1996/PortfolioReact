@@ -7,7 +7,7 @@ import {
   FaPhone,
   FaEnvelope,
 } from "react-icons/fa";
-import { themes } from "../utils/themes";
+import { themes } from "@/ui/theme/themes";
 
 type ContactProps = {
   themeName: string;

@@ -28,7 +28,7 @@ function NavBar({ themeName, toggleTheme }: NavBarProps) {
     console.log(`GA Event: Social Click - ${socialName}`);
   };
 
-  // Manejar el cambio de tema}
+  // Manejar el cambio de tema
   const handleThemeToggle = () => {
     toggleTheme();
     const newTheme = themeName === "default" ? "Dark" : "Light";
@@ -74,7 +74,8 @@ function NavBar({ themeName, toggleTheme }: NavBarProps) {
           <a
             href="https://www.linkedin.com/in/enmanuel-nava-dev/"
             className="text-light navbar-icons"
-            target="no-blank"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => handleSocialClick('LinkedIn')}
           >
             <FaLinkedin />
@@ -82,7 +83,8 @@ function NavBar({ themeName, toggleTheme }: NavBarProps) {
           <a
             href="https://www.facebook.com/enmanuel.navadavila/"
             className="text-light navbar-icons"
-            target="no-blank"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => handleSocialClick('Facebook')}
           >
             <FaFacebookF />
@@ -90,7 +92,8 @@ function NavBar({ themeName, toggleTheme }: NavBarProps) {
           <a
             href="https://github.com/end1996"
             className="text-light navbar-icons"
-            target="no-blank"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => handleSocialClick('GitHub')}
           >
             <FaGithub />
@@ -130,7 +133,8 @@ function NavBar({ themeName, toggleTheme }: NavBarProps) {
           <a
             href="https://www.linkedin.com/in/enmanuel-nava-dev/"
             className="text-light navbar-icons link-primary"
-            target="no-blank"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => handleSocialClick('LinkedIn (Desktop)')}
           >
             <FaLinkedin />
@@ -138,16 +142,18 @@ function NavBar({ themeName, toggleTheme }: NavBarProps) {
           <a
             href="https://www.facebook.com/enmanuel.navadavila/"
             className="text-light navbar-icons link-primary"
-            target="no-blank"
-            onClick={() => handleSocialClick('Facebook (Dekstop)')}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => handleSocialClick('Facebook (Desktop)')}
           >
             <FaFacebookF />
           </a>
           <a
             href="https://github.com/end1996"
             className="text-light navbar-icons link-primary"
-            target="no-blank"
-            onClick={() =>  handleSocialClick('Github (Desktop)')}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => handleSocialClick('Github (Desktop)')}
           >
             <FaGithub />
           </a>

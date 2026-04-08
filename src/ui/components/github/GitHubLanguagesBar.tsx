@@ -1,13 +1,4 @@
-import { useEffect, useState } from "react";
-
-interface GitHubLanguagesBarProps {
-  repo: string; // format: "owner/repo"
-  manualLanguages?: Record<string, number>;
-}
-
-interface LanguageData {
-  [language: string]: number;
-}
+import type { LanguageData } from "@/domain/models/Github";
 
 const languagesColors: { [key: string]: string } = {
   JavaScript: "#f1e05a",
@@ -28,27 +19,24 @@ const languagesColors: { [key: string]: string } = {
   "C++": "#f34b7d",
 };
 
-function GitHubLanguagesBar({
-  repo,
-  manualLanguages,
+interface GitHubLanguagesBarProps {
+  languages: LanguageData | null;
+  isLoading: boolean;
+  error: string | null;
+}
+
+/**
+ * Componente PRESENTACIONAL puro.
+ * Recibe los datos ya listos (del hook useGitHubLanguages).
+ * NO hace fetch. CERO side-effects.
+ */
+export default function GitHubLanguagesBar({
+  languages,
+  isLoading,
+  error,
 }: GitHubLanguagesBarProps) {
-  const [languages, setLanguages] = useState<LanguageData | null>(null);
-
-  useEffect(() => {
-    if (manualLanguages) {
-      setLanguages(manualLanguages);
-      return;
-    }
-
-    if (!repo) return;
-
-    fetch(`https://api.github.com/repos/${repo}/languages`)
-      .then((res) => res.json())
-      .then((data) => setLanguages(data))
-      .catch((err) => console.error("Error fetching languages:", err));
-  }, [repo, manualLanguages]);
-
-  if (!languages) return <p>Cargando tecnologías...</p>;
+  if (error) return <p>{error}</p>;
+  if (isLoading || !languages) return <p>Cargando tecnologías...</p>;
 
   const totalBytes = Object.values(languages).reduce(
     (sum, bytes) => sum + bytes,
@@ -112,5 +100,3 @@ function GitHubLanguagesBar({
     </div>
   );
 }
-
-export default GitHubLanguagesBar;

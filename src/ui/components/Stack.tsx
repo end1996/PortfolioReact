@@ -1,4 +1,4 @@
-import { techIcons } from "../assets/images/icons";
+import { techIcons } from "@/assets/images/icons";
 
 function Stack() {
   const technologies = [

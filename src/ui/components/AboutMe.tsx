@@ -1,4 +1,4 @@
-import { getAge } from "../utils/getAge";
+import { getAge } from "@/domain/utils/getAge";
 import ReactGa from "react-ga4";
 
 function AboutMe() {
@@ -68,7 +68,7 @@ function AboutMe() {
                 </li>
               </ul>
               <a
-                href="/CV_Enmanuel_Nava_Developer_2025.pdf"
+                href="/CV_Enmanuel_Nava_Developer_2026.pdf"
                 download
                 className="btn button btn-primary rounded-pill"
                 onClick={handleCVDownload}

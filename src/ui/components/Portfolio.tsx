@@ -1,9 +1,10 @@
 import { useState } from "react";
 import ReactGa from "react-ga4";
-import { portfolioProjects, type Project } from "../data/portfolioData";
+import { portfolioProjects } from "@/infrastructure/data/portfolioData";
+import type { Project } from "@/domain/models/Project";
 import { Button, Row, Col, Modal, Card } from "react-bootstrap";
-import RepoLanguages from "../api/RepoLanguages";
-import { themes } from "../utils/themes";
+import RepoLanguages from "./github/RepoLanguages";
+import { themes } from "@/ui/theme/themes";
 import { FaGithub } from "react-icons/fa";
 
 const categories = ["Todos", "Wordpress", "PHP", "Java", "Flutter", "React"];
@@ -51,7 +52,6 @@ export default function Portfolio({ themeName }: PortfolioProps) {
           <Button
             key={cat}
             variant={cat === selectedCategory ? "primary" : "outline-secondary"}
-            //variant="outline-secondary"
             onClick={() => setSelectedCategory(cat)}
           >
             {cat}

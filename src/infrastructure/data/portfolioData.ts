@@ -1,16 +1,5 @@
-import { projectImages } from "../assets/images/projects";
-
-export interface Project {
-  id: number;
-  title: string;
-  category: string;
-  description: string;
-  image: string;
-  repo?: string;
-  alt?: string;
-  type?: "image" | "video";
-  manualLanguages?: Record<string, number>;
-}
+import type { Project } from "@/domain/models/Project";
+import { projectImages } from "@/assets/images/projects";
 
 export const portfolioProjects: Project[] = [
   {
@@ -110,7 +99,7 @@ export const portfolioProjects: Project[] = [
     title: "API REST de sistema de inventario",
     category: "Java",
     description:
-      "El backend del sistema fue desarrollado con Spring Boot 3, siguiendo una arquitectura en capas (Controller, DTO, Entity, Repository, Service, Mapper, Specification, Exception, Config, Security) y expuesto mediante una API REST totalmente documentada con Swagger/OpenAPI 3.La documentación se genera automáticamente e incluye: Listado completo de endpoints (GET, POST, PUT, DELETE) Modelos y esquemas generados desde DTOs Descripción de parámetros, validaciones y respuestas Autorización mediante Bearer Token (JWT) Pruebas en vivo con “Try it out”",
+      "El backend del sistema fue desarrollado con Spring Boot 3, siguiendo una arquitectura en capas (Controller, DTO, Entity, Repository, Service, Mapper, Specification, Exception, Config, Security) y expuesto mediante una API REST totalmente documentada con Swagger/OpenAPI 3.La documentación se genera automáticamente e incluye: Listado completo de endpoints (GET, POST, PUT, DELETE) Modelos y esquemas generados desde DTOs Descripción de parámetros, validaciones y respuestas Autorización mediante Bearer Token (JWT) Pruebas en vivo con \"Try it out\"",
     image: projectImages.apiRest,
     alt: "proyecto api rest de sistema de inventario",
     type: "video",

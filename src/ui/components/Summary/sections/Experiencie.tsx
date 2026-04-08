@@ -1,4 +1,4 @@
-import { themes } from "../../../utils/themes";
+import { themes } from "@/ui/theme/themes";
 
 type ExperienceProps = {
   themeName: string;

@@ -21,5 +21,3 @@ export function getAge(dateOfBirth: Date | string): number {
   }
   return age;
 }
-
-getAge("1996/09/21");

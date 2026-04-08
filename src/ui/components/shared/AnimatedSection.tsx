@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type TargetAndTransition } from "framer-motion";
 import type { ReactNode } from "react";
 
 type Preset = "fade-in" | "slide-up" | "slide-left" | "zoom-in" | "slide-right";
@@ -14,7 +14,12 @@ type AnimatedSectionProps = {
   trigger?: "onLoad" | "onView";
 };
 
-const animationPresets: Record<Preset, any> = {
+interface AnimationPreset {
+  initial: TargetAndTransition;
+  whileInView: TargetAndTransition;
+}
+
+const animationPresets: Record<Preset, AnimationPreset> = {
   "fade-in": {
     initial: { opacity: 0 },
     whileInView: { opacity: 1 },
@@ -28,7 +33,7 @@ const animationPresets: Record<Preset, any> = {
     whileInView: { opacity: 1, x: 0 },
   },
   "slide-right": {
-    initial : { opacity: 0, x: 100 },
+    initial: { opacity: 0, x: 100 },
     whileInView: { opacity: 1, x: 0 },
   },
   "zoom-in": {
