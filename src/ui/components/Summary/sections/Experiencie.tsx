@@ -13,34 +13,24 @@ export function Experiencie({ themeName }: ExperienceProps) {
             themeName == "default" ? "border" : ""
           } ${themes[themeName].primary}`}
         >
-          <p className="badge bg-primary text-14 fw-400">Actualidad</p>
+          <p className="badge bg-primary text-14 fw-400">Agosto 2025 - Marzo 2026</p>
           <h3 className="text-21">Desarrollador FullStack</h3>
           <p className="text-primary">Corporación Interkambio</p>
           <ul className={`mb-0 ${themeName == "dark" ? "text-white-50" : ""}`}>
-            <li>
-              Desarrollo de sitios web a medida con WordPress, optimizados para
-              velocidad y posicionamiento SEO.
+            <li className="mb-2">
+              Arquitectura y desarrollo de un <strong>sistema de sincronización transaccional masivo</strong> entre un backend local (<strong>Java Spring Boot</strong>) y WooCommerce, manejando sincronización de miles de productos mediante orquestación de hilos asíncronos (Thread Pools) robustos.
+            </li>
+            <li className="mb-2">
+              Implementación pionera de <strong>Inteligencia Artificial offline (LLM Qwen local)</strong> para el auto-etiquetado y extracción de metadatos de catálogos de libros, elevando el SEO y las recomendaciones sin depender de APIs cloud costosas.
+            </li>
+            <li className="mb-2">
+              Construcción de interfaces frontend escalables con <strong>React y TypeScript</strong> (patrones de arquitectura limpia), garantizando la integridad visual y de datos mediante el control estricto de DTOs y serializaciones hacia el backend.
+            </li>
+            <li className="mb-2">
+              Resolución de deuda técnica crítica en plataformas e-commerce existentes, corrigiendo corrupción de datos en flujos de creación/actualización y normalización de URLs relativas.
             </li>
             <li>
-              Creación de proyectos escalables utilizando React, Spring Boot y
-              TypeScript.
-            </li>
-            <li>
-              Despliegue de aplicaciones en producción mediante NGINX y
-              servidores VPS, garantizando disponibilidad y rendimiento.
-            </li>
-            <li>
-              Administración y mantenimiento de bases de datos MySQL, asegurando
-              la integridad y eficiencia de los datos.
-            </li>
-            <li>
-              Mantenimiento y mejora de sitios web existentes, incluyendo
-              optimización de rendimiento, corrección de errores y actualización
-              de funcionalidades.
-            </li>
-            <li>
-              Manejo de control de versiones con GIT y seguimiento/ estimación
-              de tareas mediante metodología Kanban
+              Administración de servidores y despliegue: configuración de entornos en <strong>VPS Linux con NGINX</strong>, mantenimiento de bases de datos relacionales y control de versiones con Git, asegurando alta disponibilidad operativa.
             </li>
           </ul>
         </div>
@@ -50,7 +40,7 @@ export function Experiencie({ themeName }: ExperienceProps) {
           } ${themes[themeName].primary}`}
         >
           <p className="badge bg-primary text-14 fw-400">
-            Febrero 2025 – Junio 2025
+            Febrero 2025 - Junio 2025
           </p>
           <h3 className="text-21">Practicante de desarrollo web</h3>
           <p className="text-primary">APM Inversiones E.I.R.L</p>

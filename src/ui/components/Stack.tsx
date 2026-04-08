@@ -17,6 +17,7 @@ function Stack() {
     { name: "Python", icon: techIcons.python },
     { name: "MySQL", icon: techIcons.mysql },
     { name: "Git", icon: techIcons.git },
+    { name: "Docker", icon: techIcons.docker},
   ];
   return (
     <>

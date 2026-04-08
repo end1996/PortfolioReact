@@ -13,6 +13,7 @@ import java from './java.svg';
 import python from './python.svg';
 import typescript from './typescript.svg';
 import springboot from './springboot.svg';
+import docker from './docker.svg';
 
 export const techIcons = {
     react,
@@ -30,4 +31,5 @@ export const techIcons = {
     python,
     typescript,
     springboot,
+    docker,
 };

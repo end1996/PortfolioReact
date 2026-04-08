@@ -32,17 +32,10 @@ function AboutMe() {
               desarrollador FullStack
             </h2>
             <p className="opacity-75 text-16">
-              Soy un apasionado del desarrollo web y móvil con experiencia en
-              tecnologías modernas. Me especializo en crear aplicaciones
-              dinámicas y eficientes, utilizando herramientas como React,
-              Flutter y Spring Boot. Además poseo habilidad en análisis de datos
-              con inteligencia artificial con Python y Java.
+              Especializado en el diseño y construcción de plataformas escalables, con un dominio sólido del desarrollo backend transaccional en <strong>Java y Spring Boot</strong>, y arquitecturas frontend modulares utilizando <strong>React y TypeScript</strong>. Me apasiona resolver problemas complejos: desde sincronización masiva de datos y cuellos de botella de rendimiento, hasta mantener sistemas resilientes bajo estrictos patrones de arquitectura limpia (Hexagonal, Container/Presentational).
             </p>
             <p className="opacity-75 text-16">
-              Me encanta aprender y adaptarme a nuevas tecnologías, siempre
-              buscando mejorar mis habilidades y ofrecer soluciones innovadoras.
-              Mi objetivo es contribuir al desarrollo de proyectos que impacten
-              positivamente a los usuarios y la comunidad.
+              Más allá de la web tradicional, poseo bases sólidas en <strong>análisis de datos, Machine Learning y Deep Learning con Python</strong>. Integro conceptos de Inteligencia Artificial (como el uso eficiente de LLMs locales) para buscar la automatización de procesos y el enriquecimiento de metadatos. Mi propósito es diseñar software seguro, eficiente y optimizado para generar un impacto real en el negocio.
             </p>
           </div>
           <div className="col-lg-5 col-xl-4 text-lg-start">
@@ -80,20 +73,20 @@ function AboutMe() {
           <div className="container my-5">
             <div className="row text-center py-4">
               <div className="col-6 col-md-3 border-end border-secondary">
-                <h1 className="text-48">💻</h1>
-                <p className="text-16">Desarrollo Web</p>
+                <h1 className="text-48">🚀</h1>
+                <p className="text-16">Arquitectura de Software</p>
               </div>
               <div className="col-6 col-md-3 border-end border-secondary">
-                <h1 className="text-48">📱</h1>
-                <p className="text-16">Desarrollo Móvil</p>
+                <h1 className="text-48">⚙️</h1>
+                <p className="text-16">Backend y APIs (Java)</p>
               </div>
               <div className="col-6 col-md-3 border-end border-secondary mt-4 mt-md-0">
-                <h1 className="text-48">📊</h1>
-                <p className="text-16">Gestión de Proyectos</p>
+                <h1 className="text-48">⚛️</h1>
+                <p className="text-16">Frontend Modular (React)</p>
               </div>
               <div className="col-6 col-md-3 mt-4 mt-md-0">
-                <h1 className="text-48">📝</h1>
-                <p className="text-16">Liderazgo de Equipos</p>
+                <h1 className="text-48">🧠</h1>
+                <p className="text-16">Integración IA Local</p>
               </div>
             </div>
           </div>

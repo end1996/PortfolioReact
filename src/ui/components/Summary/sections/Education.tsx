@@ -20,7 +20,7 @@ export function Education({ themeName }: EducationProps) {
         </h3>
         <p className="text-primary">SENATI</p>
         <p className={`mb-0 ${themeName == "dark" ? "text-white-50" : ""}`}>
-          Actualmente cursando el 5to ciclo de la carrera en modalidad
+          Actualmente cursando el último ciclo de la carrera en modalidad
           semi-presencial.
         </p>
       </div>
