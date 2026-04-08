@@ -1,54 +1,133 @@
-# React + TypeScript + Vite
+# Enmanuel Nava - Professional Developer Portfolio 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![Architecture](https://img.shields.io/badge/architecture-Hexagonal-success?style=for-the-badge)
 
-Currently, two official plugins are available:
+A modern, highly performant, and scalable portfolio web application built with **React, TypeScript, and Vite**. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project was recently refactored to implement a strict **Hexagonal Architecture (Feature-Sliced)**, ensuring a robust separation of concerns, maintainability, and enterprise-level codebase quality.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🏗 Architecture Review
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+This project enforces a clean architectural boundary separating the UI from the business logic and external services. The `src/` directory is divided into 4 strict layers:
+
+### 1. `domain/` (The Core)
+Contains pure business logic and interfaces. It has absolute zero knowledge of React or external libraries.
+- Pure utility functions (like age calculation).
+- Interfaces and Data Models (`Project.ts`, `Github.ts`).
+
+### 2. `infrastructure/` (The Outside World)
+Handles all external communications, APIs, and data sources.
+- **GitHub API Integration:** Isolated data-fetching logic (`githubApi.ts`).
+- **Static Data:** Project listings and hardcoded records.
+
+### 3. `application/` (The Orchestrator)
+The bridge between Infrastructure and UI.
+- Custom Hooks (`useGitHubLanguages.ts`).
+- Orchestrates state management, loading states, and error handling.
+
+### 4. `ui/` (The Presentation)
+Responsible only for rendering data and catching user events. No business or fetch logic is allowed here.
+- Built using the **Container / Presentational** pattern.
+- Strict path aliases configured (`@/...` imports) to avoid fragile relative paths.
+
+---
+
+## ✨ Key Features
+
+- **Hexagonal Architecture:** Future-proof, highly decoupled codebase.
+- **Dynamic Theming:** Seamless Dark and Light mode toggling logic.
+- **Live GitHub Integration:** Dynamically fetches and parses the programming languages used in the listed projects directly from GitHub's REST API.
+- **Container/Presentational Pattern:** `RepoLanguages` handles the state subscription, while `GitHubLanguagesBar` strictly draws the visual bars.
+- **Google Analytics 4 (GA4):** Intelligent interaction tracking mapped to custom events inside the application.
+- **EmailJS Integration:** Working contact form without needing a dedicated backend.
+- **Framer Motion Animations:** Smooth, viewport-triggered scroll animations.
+
+---
+
+## 🛠 Tech Stack
+
+**Core:**
+- React 18
+- TypeScript (Strict Mode)
+- Vite (SWC Compiler)
+
+**Styling & UI:**
+- React Bootstrap
+- Vanilla CSS with custom utility classes (`styles.css`)
+- Framer Motion (Animations)
+- React Icons
+
+**Integrations:**
+- Axios (HTTP Client)
+- React GA4 (Analytics)
+- EmailJS Browser (Contact Form)
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── domain/            # 🧠 Layer 1: Core Domain Rules & Models
+├── infrastructure/    # 🔌 Layer 2: Apis and Data Adapters
+├── application/       # 🔗 Layer 3: Application Hooks & State
+└── ui/                # 🎨 Layer 4: React Components, Styles, Theme
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### 🛣️ Path Aliases
+To avoid messy relative imports (e.g., `../../../domain`), this project uses fully configured absolute paths mapping directly to the architectural layers:
+```typescript
+import { Type } from "@/domain/..."
+import { Service } from "@/infrastructure/..."
+import { Hook } from "@/application/..."
+import { Component } from "@/ui/..."
 ```
+
+---
+
+## 🚀 Getting Started
+
+To run this project locally, follow these steps:
+
+### Prerequisites
+Make sure you have Node.js installed (v18+ recommended).
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/end1996/PortfolioReact.git
+   cd PortfolioReact
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 👨‍💻 Author
+
+**Enmanuel Nava**  
+FullStack Developer | Software Engineering Student
+- [LinkedIn Profile](https://www.linkedin.com/in/enmanuel-nava-dev/)
+- [GitHub Profile](https://github.com/end1996)
+
+---
+*If you find this architectural setup useful, feel free to use it as a reference for your own React projects!*
