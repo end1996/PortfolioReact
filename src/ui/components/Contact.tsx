@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import { useState, useRef } from "react";
 import {
   FaFacebookF,
   FaGithub,
@@ -15,28 +14,44 @@ type ContactProps = {
 
 function Contact({ themeName }: ContactProps) {
   const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!formRef.current) return;
 
-    emailjs
-      .sendForm(
-        "service_29wyack",
-        "template_pyyjr6y",
-        formRef.current,
-        "Mac61tOHRoOB4enMf"
-      )
-      .then(
-        () => {
-          alert("Mensaje enviado con éxito");
-          formRef.current?.reset();
-        },
-        (error) => {
-          alert("Error al enviar: " + error.text);
-        }
-      );
+    setStatus("submitting");
+    const formData = new FormData(formRef.current);
+    
+    // Leemos la API Key desde las variables de entorno de Vite de manera segura
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string);
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus("success");
+        formRef.current.reset();
+        setTimeout(() => setStatus("idle"), 6000);
+      } else {
+        console.error("Error Web3Forms:", data);
+        setStatus("error");
+        setErrorMessage(data.message || "Hubo un error con el servidor.");
+        setTimeout(() => setStatus("idle"), 6000);
+      }
+    } catch (error) {
+      console.error("Error de conexión:", error);
+      setStatus("error");
+      setErrorMessage("Actualmente no hay conexión al servidor.");
+      setTimeout(() => setStatus("idle"), 6000);
+    }
   };
   return (
     <div className="container">
@@ -148,11 +163,21 @@ function Contact({ themeName }: ContactProps) {
                 id="submit-btn"
                 className="btn button btn-primary rounded-pill d-inline-flex"
                 type="submit"
+                disabled={status === "submitting"}
               >
-                Enviar mensaje
+                {status === "submitting" ? "Enviando..." : "Enviar mensaje"}
               </button>
             </p>
-            <div className="Toastify"></div>
+            {status === "success" && (
+              <div className="alert alert-success mt-3 p-2 text-center" role="alert">
+                ¡Mensaje enviado con éxito! Te responderé a la brevedad.
+              </div>
+            )}
+            {status === "error" && (
+              <div className="alert alert-danger mt-3 p-2 text-center" role="alert">
+                Error: {errorMessage}
+              </div>
+            )}
           </form>
         </div>
       </div>
