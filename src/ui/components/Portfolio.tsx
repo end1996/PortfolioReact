@@ -9,6 +9,8 @@ import { FaGithub } from "react-icons/fa";
 
 const categories = ["Todos", "Wordpress", "PHP", "Java", "Flutter", "React"];
 
+const isVideo = (src: string) => /\.(mp4|webm|ogg)$/i.test(src);
+
 type PortfolioProps = {
   themeName: string;
 };
@@ -66,7 +68,7 @@ export default function Portfolio({ themeName }: PortfolioProps) {
               onClick={() => setSelectedProject(project)}
               className={`h-100 ${themes[themeName].secondary}`}
             >
-              {project.type === "video" ? (
+              {isVideo(project.image) ? (
                 <video
                   className="project-img p-2 w-100"
                   src={project.image}
@@ -122,9 +124,9 @@ export default function Portfolio({ themeName }: PortfolioProps) {
           <Modal.Title>{selectedProject?.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {selectedProject?.type === "video" ? (
+          {selectedProject && isVideo(selectedProject.image) ? (
             <video
-              src={selectedProject?.image}
+              src={selectedProject.image}
               autoPlay
               muted
               loop

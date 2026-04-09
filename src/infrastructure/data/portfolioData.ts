@@ -4,107 +4,78 @@ import { projectImages } from "@/assets/images/projects";
 export const portfolioProjects: Project[] = [
   {
     id: 1,
-    title: "Web Form Plugin - ArteIdeas",
-    category: "Wordpress",
-    description:
-      "El Web Form Plugin es una solución completa para integrar un formulario personalizado de impresión de imágenes en WordPress con WooCommerce. Permite a los usuarios subir imágenes, seleccionar tamaños, marcos y personalizar sus impresiones antes de añadirlas al carrito de compras. Incluye opciones de pago y gestión de pedidos, facilitando una experiencia de compra fluida. El plugin es ideal para fotógrafos, artistas y tiendas de impresión que desean ofrecer productos personalizados a sus clientes.",
-    image: projectImages.webForm,
-    repo: "end1996/webFormPluginArteIdeas",
-    alt: "proyecto arteIdeas",
-  },
-  {
-    id: 2,
-    title: "Agencia de Viajes",
+    title: "API REST de Sistema de Inventario",
     category: "Java",
     description:
-      "Aplicación de agencia de viajes desarrollada en Java con interfaz gráfica. Permite a los usuarios buscar, reservar y gestionar viajes de manera intuitiva. Incluye funcionalidades como búsqueda de destinos, reservas de vuelos y gestión de itinerarios.",
-    image: projectImages.agencia,
-    repo: "end1996/agencia_viajes",
-    alt: "proyecto agencia de viajes",
-  },
-  {
-    id: 3,
-    title: "Gestion de Tareas",
-    category: "PHP",
-    description:
-      "Aplicación de gestión de tareas desarrollada en PHP con base de datos MySQL. Permite a los usuarios crear, editar y eliminar tareas. Incluye funcionalidades de organización de tareas por categorías y prioridades, como backlog, en progreso y completadas.",
-    image: projectImages.tareas,
-    repo: "end1996/GestionTareas",
-    alt: "proyecto gestión de tareas",
-  },
-  {
-    id: 4,
-    title: "Peliculas en Cines",
-    category: "Flutter",
-    description:
-      "Aplicación móvil desarrollada en Flutter que muestra las películas en cines, con detalles como sinopsis, duración y calificación. Permite a los usuarios explorar la cartelera actual y obtener información sobre las películas más populares. Incluye una interfaz atractiva y fácil de usar, optimizada para dispositivos móviles. Consume una API para obtener datos actualizados sobre las películas en cines.",
-    image: projectImages.peliculas,
-    repo: "end1996/peliculas_en_cines",
-    alt: "proyecto peliculas en cines",
-  },
-  {
-    id: 5,
-    title: "Porftolio Personal",
-    category: "React",
-    description:
-      "Portafolio personal desarrollado en React con animaciones y secciones interactivas. Usa React Bootstrap para el diseño y TypeScript para la tipificación. Incluye secciones de presentación, habilidades, proyectos y contacto. Responsive y optimizado",
-    image: projectImages.portfolio,
-    repo: "end1996/PortfolioReact",
-    alt: "proyecto porfolio react",
-  },
-  {
-    id: 6,
-    title: "Catalogo de Productos web",
-    category: "Wordpress",
-    description:
-      "Sitio web desarrollado en WordPress para gestionar y mostrar un catálogo de productos. Incluye búsqueda, filtros por categoría y rango de precios, además de una interfaz totalmente responsiva y fácil de usar.Proyecto realizado para la empresa Interkambio.",
-    image: projectImages.catalogo,
-    alt: "proyecto catálogo de productos",
-  },
-  {
-    id: 7,
-    title: "Generador de catálogo de libros",
-    category: "React",
-    description:
-      "Aplicación web desarrollada en React que permite generar catálogos de libros en formato PDF con información detallada como título, autor, precio y imagen. Incluye funcionalidades como búsqueda, filtros por categoría y rango de precios, además de una interfaz totalmente responsiva y fácil de usar.Proyecto realizado para la empresa Interkambio.",
-    image: projectImages.catalogoLibros,
-    alt: "proyecto generador de catálogo de libros",
-    manualLanguages: {
-      TypeScript: 100,
-    }
-  },
-  {
-    id: 8,
-    title: "Sistema de Inventario",
-    category: "React",
-    description:
-      "Sistema interno desarrollado para la gestión de inventario, construido con React y Spring Boot. Incluye autenticación JWT, CRUD de productos, reportes en PDF, dashboard con accesos directos y API REST. Proyecto empresarial con información interna protegida, por lo que solo se muestra la interfaz gráfica de forma difuminada",
-    image: projectImages.sistemaInventario,
-    alt: "proyecto sistema de inventario",
-    manualLanguages: {
-      TypeScript: 100,
-    }
-  },
-  {
-    id: 9,
-    title: "Landing Page",
-    category: "Wordpress",
-    description:
-      "Landing page desarrollada en Wordpress con una interfaz atractiva y fácil de usar. Incluye una sección de presentación, una sección de servicios y una sección de contacto. Responsive y optimizada. Proyecto realizado para la empresa Interkambio.",
-    image: projectImages.landingPage,
-    alt: "proyecto landing page",
-  },
-  {
-    id: 10,
-    title: "API REST de sistema de inventario",
-    category: "Java",
-    description:
-      "El backend del sistema fue desarrollado con Spring Boot 3, siguiendo una arquitectura en capas (Controller, DTO, Entity, Repository, Service, Mapper, Specification, Exception, Config, Security) y expuesto mediante una API REST totalmente documentada con Swagger/OpenAPI 3.La documentación se genera automáticamente e incluye: Listado completo de endpoints (GET, POST, PUT, DELETE) Modelos y esquemas generados desde DTOs Descripción de parámetros, validaciones y respuestas Autorización mediante Bearer Token (JWT) Pruebas en vivo con \"Try it out\"",
+      "Backend transaccional para un sistema de inventario corporativo, desarrollado con Spring Boot 3 bajo Arquitectura Limpia/Hexagonal. Expone una API REST completamente documentada mediante Swagger/OpenAPI 3. Incluye autenticación segura mediante tokens JWT (Bearer), control estricto de DTOs para evitar corrupción de datos, y validaciones robustas.",
     image: projectImages.apiRest,
-    alt: "proyecto api rest de sistema de inventario",
-    type: "video",
+    alt: "Documentación Swagger API REST Spring Boot",
     manualLanguages: {
       Java: 100,
     },
+  },
+  {
+    id: 2,
+    title: "Dashboard de Gestión Empresarial",
+    category: "React",
+    description:
+      "Frontend administrativo interno (B2B) construido con React y TypeScript. Consume de forma asíncrona la API REST robusta en Java para la visualización y manipulación de enormes lotes de productos. Implementa un tablero interactivo, reportes generados dinámicamente en PDF y Hooks customizados interactuando con JWTs salvaguardados. (Imágenes difuminadas bajo contrato de confidencialidad).",
+    image: projectImages.dashboardReact,
+    alt: "Dashboard web Sistema de inventario React",
+    manualLanguages: {
+      TypeScript: 100,
+    }
+  },
+  {
+    id: 3,
+    title: "IABookRecommender — Motor NLP de Recomendaciones",
+    category: "Python",
+    description:
+      "Proceso batch de Inteligencia Artificial con dos módulos independientes. El motor de recomendaciones vectoriza descripciones de libros con TF-IDF y calcula afinidad semántica mediante KNN (distancia coseno), generando rankings ponderados por contenido (45%), categoría canónica (45%) y autoría (10%). El pipeline de enriquecimiento normaliza el catálogo en 3 fases: detección de idioma offline con lingua (~89% de cobertura) + fallback a Qwen local, generación de descripciones via Google Books API o LM Studio, y normalización de autores. Costo cloud: cero.",
+    image: projectImages.bookIaRecommender,
+    repo: "end1996/IABookRecommender",
+    alt: "Motor NLP Python TF-IDF KNN recomendaciones libros",
+  },
+  {
+    id: 4,
+    title: "WooCommerce SKU Sync Core",
+    category: "Wordpress",
+    description:
+      "Plugin corporativo para ecosistemas WordPress/WooCommerce desarrollado explícitamente para interceptar y sincronizar flujos de actualización de gran volumen. Resuelve la brecha de integridad entre un sistema relacional local de inventarios y el e-commerce mapeando y forzando el Stock y Precios directamente vía referencias SKU mediante hooks nativos estructurados en PHP.",
+    image: projectImages.wcSkuSyncCore,
+    repo: "endInterkambio/Update-product-by-sku",
+    alt: "Backend de sincronizacion wp sku",
+  },
+  {
+    id: 5,
+    title: "Web Form Architect Plugin",
+    category: "Wordpress",
+    description:
+      "Solución que inyecta una interfaz dinámica dentro del rígido ecosistema monolítico de WooCommerce. Permite a prospectos configurar sus impresiones personalizadas on-the-fly (dimensiones, marcos, sustratos). Un ejemplo puro de puente arquitectónico entre PHP tradicional y la fluidez del estado moderno de frontend.",
+    image: projectImages.webForm,
+    repo: "end1996/webFormPluginArteIdeas",
+    alt: "Plugin interactivo Ecommerce",
+  },
+  {
+    id: 6,
+    title: "Motor Generador de Catálogos Automáticos",
+    category: "React",
+    description:
+      "SPA en React altamente especializada que intercepta y estandariza registros crudos de inventario para exportar maquetas finales de revistas/catálogos en PDF listos para distribución comercial. Reduce la carga del maquetador utilizando selectores inteligentes en cascada, grid builders dinámicos y compresión instantánea en el navegador.",
+    image: projectImages.generadorCatalogo,
+    alt: "Aplicativo web generador de pdf libros",
+    manualLanguages: {
+      TypeScript: 100,
+    }
+  },
+  {
+    id: 7,
+    title: "Portfolio FSD Hexagonal",
+    category: "React",
+    description:
+      "Código fuente de esta misma carta de presentación. Refactorizado recientemente para romper con la planicie de la Web Básica adoptando una robusta Arquitectura Hexagonal y DSD (Feature-Sliced-Design). Las capas de Infraestructura (Llamadas Axios a Github), Dominio (Types) y Renderizado UI residen sin tocarse gracias a path-aliases en Vite (@/).",
+    image: projectImages.portfolio,
+    repo: "end1996/PortfolioReact",
+    alt: "Render visual de este mismo portfolio en src",
   },
 ];
