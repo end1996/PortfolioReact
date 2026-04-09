@@ -7,7 +7,7 @@ import RepoLanguages from "./github/RepoLanguages";
 import { themes } from "@/ui/theme/themes";
 import { FaGithub } from "react-icons/fa";
 
-const categories = ["Todos", "Wordpress", "PHP", "Java", "Flutter", "React"];
+const categories = ["Todos", ...new Set(portfolioProjects.map((p) => p.category))];
 
 const isVideo = (src: string) => /\.(mp4|webm|ogg)$/i.test(src);
 
@@ -24,9 +24,17 @@ export default function Portfolio({ themeName }: PortfolioProps) {
       ? portfolioProjects
       : portfolioProjects.filter((p) => p.category === selectedCategory);
 
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project);
+    ReactGa.event({
+      category: "Portfolio",
+      action: "Proyecto visto",
+      label: project.title,
+    });
+  };
+
   /**
    * Registra un evento cuando el usuario hace clic para ver el código de un proyecto.
-   * @param projectName El nombre del proyecto para usarlo como 'label' en GA4.
    */
   const handleViewCode = (projectName: string) => {
     ReactGa.event({
@@ -34,7 +42,6 @@ export default function Portfolio({ themeName }: PortfolioProps) {
       action: "Ver código",
       label: projectName,
     });
-    console.log("Evento recibido");
   };
 
   return (
@@ -65,7 +72,7 @@ export default function Portfolio({ themeName }: PortfolioProps) {
         {filteredProjects.map((project) => (
           <Col xs={12} sm={6} md={4} key={project.id} className="mb-4">
             <Card
-              onClick={() => setSelectedProject(project)}
+            onClick={() => handleProjectClick(project)}
               className={`h-100 ${themes[themeName].secondary}`}
             >
               {isVideo(project.image) ? (

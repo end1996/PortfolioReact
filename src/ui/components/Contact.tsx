@@ -7,6 +7,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { themes } from "@/ui/theme/themes";
+import ReactGa from "react-ga4";
 
 type ContactProps = {
   themeName: string;
@@ -16,6 +17,25 @@ function Contact({ themeName }: ContactProps) {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const formStartedRef = useRef(false);
+
+  const handleFormStart = () => {
+    if (formStartedRef.current) return;
+    formStartedRef.current = true;
+    ReactGa.event({
+      category: "Contacto",
+      action: "Formulario iniciado",
+      label: "Primer campo enfocado",
+    });
+  };
+
+  const handleSocialClick = (socialName: string) => {
+    ReactGa.event({
+      category: "Contacto",
+      action: "Clic en Red Social",
+      label: socialName,
+    });
+  };
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -39,17 +59,33 @@ function Contact({ themeName }: ContactProps) {
       if (data.success) {
         setStatus("success");
         formRef.current.reset();
+        formStartedRef.current = false;
+        ReactGa.event({
+          category: "Contacto",
+          action: "Formulario enviado",
+          label: "Éxito",
+        });
         setTimeout(() => setStatus("idle"), 6000);
       } else {
         console.error("Error Web3Forms:", data);
         setStatus("error");
         setErrorMessage(data.message || "Hubo un error con el servidor.");
+        ReactGa.event({
+          category: "Contacto",
+          action: "Formulario enviado",
+          label: `Error: ${data.message ?? "Web3Forms"}`,
+        });
         setTimeout(() => setStatus("idle"), 6000);
       }
     } catch (error) {
       console.error("Error de conexión:", error);
       setStatus("error");
       setErrorMessage("Actualmente no hay conexión al servidor.");
+      ReactGa.event({
+        category: "Contacto",
+        action: "Formulario enviado",
+        label: "Error: Sin conexión al servidor",
+      });
       setTimeout(() => setStatus("idle"), 6000);
     }
   };
@@ -89,6 +125,7 @@ function Contact({ themeName }: ContactProps) {
                 href="https://www.linkedin.com/in/enmanuel-nava-dev/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => handleSocialClick("LinkedIn (Contacto)")}
               >
                 <i className="fab fa-linkedin">
                   <FaLinkedin />
@@ -100,6 +137,7 @@ function Contact({ themeName }: ContactProps) {
                 href="https://www.facebook.com/enmanuel.navadavila"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => handleSocialClick("Facebook (Contacto)")}
               >
                 <i className="fab fa-facebook-f">
                   <FaFacebookF />
@@ -111,6 +149,7 @@ function Contact({ themeName }: ContactProps) {
                 href="https://github.com/end1996"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => handleSocialClick("GitHub (Contacto)")}
               >
                 <i className="fab fa-github">
                   <FaGithub />
@@ -128,6 +167,7 @@ function Contact({ themeName }: ContactProps) {
             id="contact-form"
             ref={formRef}
             onSubmit={sendEmail}
+            onFocus={handleFormStart}
           >
             <div className="row g-4">
               <div className="col-xl-6">
