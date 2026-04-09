@@ -17,13 +17,23 @@
   outline: none;
 }
 
-#home {
-  background: url("../assets/images/background.webp") no-repeat center center fixed;
+#home, #home.bg-dark {
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#home {
+  background-image: url("../assets/images/background.webp");
+}
+
+#home.bg-dark {
+  background-image: url("../assets/images/background-black.webp");
 }
 
 /* Estilos para el icono de toggle del menú */
